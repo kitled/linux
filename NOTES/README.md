@@ -7,3 +7,46 @@
 > 
 > It's hard to find a one-size-fits-all structure, so it may evolve in time, but discoverability will be handled by tags in the metadata of Markdown files.
 
+
+
+
+
+## Table of contents
+
+Generally by alpha order, unless reasons.
+
+> ⚠️ This is work-in-progress, take this list as a TODO (a lot may be missing at any time).
+
+```
+.
+├── SSH (OpenSSH)
+│   ├── config
+│   ├── ssh-keygen
+│   ├── sshd (OpenSSH Server) https://www.openssh.com/
+│   ├── SCP (Secure copy protocol)
+└── Storage
+    ├── Btrfs
+    ├── XFS
+    └── ZFS
+```
+
+<!--
+```
+.
+├── xxxx
+├── storage
+│   ├── README.md
+│   ├── zfs.md
+│   ├── 
+│   ├── 
+│   ├── 
+│   ├── 
+├── xxxx
+│   └── xxxx
+└── xxxx
+```
+-->
+
+
+
+

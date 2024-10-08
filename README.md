@@ -4,7 +4,7 @@
 Notes on all things Linux.
 
 > [!Tip]
-> Start here: [/NOTES](/NOTES/README.md)
+> Start here: [NOTES](/NOTES/README.md)
 
 ----
 
@@ -16,10 +16,20 @@ Notes on all things Linux.
 
 1. All notes have the suffix.extension `--note.md` (Markdown file).
 
+
 1. Notes are placed next to the thing:
 
     `/path/to/file`    
     `/path/to/file--note.md`
+
+    All relative paths in this repo (first/second/third.ext) can be inferred from an actual Linux system.
+    
+    For instance, if there's a file  
+    `/etc/ssh/sshd_config` on Linux,  
+    and if I have a note about it,  
+    then it's located in this repo at  
+    `etc/ssh/sshd_config--note.md`
+
 
 1. A typical Linux filesystem (here, Debian 12) has the following directories.  
     This repository mirrors this structure, placing each note next to the thing. 
@@ -32,26 +42,40 @@ Notes on all things Linux.
     media/      run/        var/        
     ```
 
+
 1. I added a few directories.
 
     ```
     ADMIN/      Administrator manual
-    CONFIGS/    Turn-key procedures & scripts
+    CONFIGS/    ⚙️ Turn-key procedures & scripts
     GUIDES/     Let me explain CONFIGS
     INFO/       Not Linux but related (vendors, CSP, OEM, GH…)
     KB/         Heavy book-style exhaustive docs.
-    NOTES/      My notes <== BEGIN HERE
+
+    NOTES/   📔 My notes  <==  BEGIN HERE :)
     ```
 
-1. The most important directory is **NOTES: begin there** if unsure. 
+
+1. The most important directory is **[`NOTES`](/NOTES/README.md)**.  
+**[Begin there](/NOTES/README.md)** if unsure. 
+
+
+1. `ADMIN` is my "delta" manual: take all the manuals, then add mine to fill the gaps—and *hasten* the work!
+
+
+1. `GUIDES` will contain more prose, discussion, perspectives, stories.
+
+
+1. `CONFIGS`, explained by `GUIDES`, tie together all the notes knowledge into actionable stacks ready for production. 
+
+    Procedures(📜) may be written as:
     
-1. ADMIN is my "delta" manual: take all the manuals, then add mine to fill the gaps—and *hasten* the work!
+    - `.sh` shell scripts(⚙️) prefixed with `EXEC--` (rename + `chmod` to run)
+    - notebooks(📑) using a `bash` kernel (requires Jupyter install + custom things)
+    - `ssh` wrappers to deploy remotely (e.g., on your VPS).
 
-1. GUIDES will contain more prose, discussion, perspectives, stories.
 
-1. CONFIGS, explained by GUIDES, tie together all the notes knowledge into actionable stacks ready for production.
-
-1. INFO & KB are just directories to put things that would clutter elsewhere.
+1. `INFO` & `KB` are just directories to put things that would clutter elsewhere.
 
 
 

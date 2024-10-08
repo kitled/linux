@@ -41,4 +41,6 @@
 
 
 # MORE STUFF, MAYBE, LATER
-#    - [ ] Enable boot service (monitors changes to auto-document your notes)
+#    - [ ] Enable boot service (monitors changes to auto-doc your notes + pull from origin)
+
+

@@ -13,9 +13,9 @@ Notes on all things Linux.
 
 ## How to use
 
-*It's just a bunch of notes* : ) *So do as you wish!*  
+> *It's just a bunch of notes* : ) *So do as you wish!*  
 
-Here's my thinking:  
+Here's my thinking.  
 (work-in-progress)
 
 - To see the note of any  

@@ -19,19 +19,19 @@ Generally by alpha order, unless reasons.
 
 
 .  
-`├──` [SSH](SSH) (OpenSSH)  
-`│    ├──` config  
-`│    ├──` ssh-keygen  
-`│    ├──` sshd (OpenSSH Server) https://www.openssh.com/  
-`│    └──` SCP (Secure copy protocol)  
+`├──` [**SSH**](SSH)  
+`│    ├──` [`config`](SSH/config.md)  
+`│    ├──` [`ssh-keygen`](SSH/ssh-keygen.md)  
+`│    ├──` [`sshd`](SSH/sshd.md) (OpenSSH Server)   
+`│    └──` [SCP](SSH/SCP.md) (Secure copy protocol)  
 `└──` Storage  
 `     ├──` Btrfs  
 `     ├──` XFS  
 `     └──` ZFS  
 
 
-<!--
-  templatw
+<!-- TEMPLATE
+
 .  
 `├──` zxcv  
 `│    ├──` zxcv  
@@ -44,7 +44,8 @@ Generally by alpha order, unless reasons.
 `     ├──` zxcv   
 `     └──` zxcv  
 
-
-
 -->
+
+
+
 

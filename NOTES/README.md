@@ -15,6 +15,10 @@
 
 Generally by alpha order, unless reasons.
 
+- A directory note is the `./README.md`
+    - All READMEs = full toc & intros of these notes
+
+
 > ⚠️ This is work-in-progress, take this list as a TODO (a lot may be missing at any time).
 
 

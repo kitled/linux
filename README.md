@@ -15,7 +15,8 @@ Notes on all things Linux.
 
 *It's just a bunch of notes* : ) *So do as you wish!*  
 
-Here's my thinking: (work-in-progress)
+Here's my thinking:  
+(work-in-progress)
 
 - To see the note of any  
 `/…/thing` ==> you add "`--note.md`" at the end:  

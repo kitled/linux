@@ -9,8 +9,10 @@
 #  1. Run in local (interactive) mode, or remote (config) mode.
 #  
 #      - Local "interactive" mode will ask for all the things.
-#      - Remote "config" mode expects a configuration file and runs via `ssh`.
+#      - Remote "config" mode expects a configuration file and wraps `ssh` under the hood.
 #        A safe example ("great defaults") is provided at `CONFIG/config`
+#      - Flags: -c --config FILE  to use config FILE
+#               -i --interactive  to force interactive mode (make sure you get stdout!)
 #  
 #  2. Whether interactively or in the config file, select features.
 #  

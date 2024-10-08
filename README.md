@@ -1,2 +1,5 @@
-# linux
-Linux notes
+# Linux
+
+Notes on all things Linux.
+
+

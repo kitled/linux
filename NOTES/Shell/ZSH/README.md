@@ -75,7 +75,7 @@ compinit
 
 ### Configuration
 
-Zsh is configured mostly through your **`~/.zshrc`** file, following the usual inheritance paths from the system-wide `/etc/zsh/zshrc` .  
+Zsh is configured through your **`~/.zshrc`** file, following the usual inheritance paths from the system-wide `/etc/zsh/zshrc` .  
 Global Order: `zshenv`, `zprofile`, `zshrc`, `zlogin`
 
 You can tweak lots of parameters.
@@ -94,7 +94,7 @@ Near-infinite history size: in `~/.zshrc` set these parameters to a high-enough 
 
 ```zshrc
 # Number of commands to keep in memory
-HISTSIZE=1000000
+HISTSIZE=100000
 
 # Number of commands to save to the history file    
 SAVEHIST=1000000
@@ -184,9 +184,9 @@ https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-m
 2. Activate the plugin in `~/.zshrc`.  
 It **must** be last!
 
-```sh
-plugins=( [plugins...] zsh-syntax-highlighting)
-```
+    ```sh
+    plugins=( [plugins...] zsh-syntax-highlighting)
+    ```
 
 3. Restart Zsh (such as by opening a new instance of your terminal emulator).
 

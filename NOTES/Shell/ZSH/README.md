@@ -16,7 +16,7 @@
 
 ## Setup
 
-[Zsh](https://zsh.sourceforge.io/) is great for IT people and programmers. Productivity is increased by great plugins like `zsh-autosuggestions` (helps reuse & do variations on history commands).
+Zsh is great for IT people and programmers. Productivity is increased by great plugins like `zsh-autosuggestions` (helps reuse & do variations on history commands).
 
 
 

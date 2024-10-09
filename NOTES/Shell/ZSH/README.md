@@ -34,7 +34,7 @@ Otherwise simply run `zsh` (right within `bash` or any other shell) to use it.
 You will be greeted by the Z Shell config function for new users, `zsh-newuser-install`.  
 *Hit <kbd>q</kbd> to quit if you're going to install Oh My Zsh next.*
 
-Otherwise, `1 1 1 00 3 000 0 2 1 3 0 4 1 s 4 u 0`
+Otherwise, `1 1 1 00 3 000 0 2 1 3 0 4 1 s 4 u 0` is a good enough setup.
 
 ```
 The function will not be run in future, but you can run
@@ -155,18 +155,18 @@ https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zs
 
 1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
-```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
+    ```sh
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    ```
 
 2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):  
 
-```sh
-plugins=( 
-    # other plugins...
-    zsh-autosuggestions
-)
-```
+    ```sh
+    plugins=( 
+        # other plugins...
+        zsh-autosuggestions
+    )
+    ```
 
 3. Restart zsh (such as by opening a new instance of your terminal emulator).
 
@@ -177,9 +177,9 @@ https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-m
 
 1. Clone this repository in oh-my-zsh's plugins directory:
 
-```sh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
+    ```sh
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
 
 2. Activate the plugin in `~/.zshrc`.  
 It **must** be last!

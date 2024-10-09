@@ -67,19 +67,19 @@ SAVEHIST=1000000
 
 
 
-### Oh My Zsh!
+## Oh My Zsh!
 
 https://ohmyz.sh/
 
 
-#### Installation
+### Installation
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 
-#### Plugins
+### Plugins
 
 - Overview: <https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins-Overview>
 - Full list: <https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins>
@@ -113,7 +113,7 @@ E.g.,
 > Don't add too many (strict need-to basis), as it may slow down shell startup.
 
 
-#### zsh-autosuggestions
+### zsh-autosuggestions
 
 https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
@@ -135,7 +135,7 @@ plugins=(
 3. Restart zsh (such as by opening a new instance of your terminal emulator).
 
 
-#### zsh-syntax-highlighting
+### zsh-syntax-highlighting
 
 https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
 
@@ -178,7 +178,7 @@ plugins=( [plugins...] zsh-syntax-highlighting)
     ```
 -->
 
-### Spaceship Prompt
+## Spaceship Prompt
 
 🏛️ https://spaceship-prompt.sh/  
 🧬 https://github.com/spaceship-prompt/spaceship-prompt  
@@ -186,7 +186,7 @@ plugins=( [plugins...] zsh-syntax-highlighting)
 > 🚀⭐ Minimalistic, powerful and extremely customizable Zsh prompt
 
 
-#### Installation
+### Installation
 
 🔗 https://spaceship-prompt.sh/getting-started/#__tabbed_1_3
 

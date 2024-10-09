@@ -28,7 +28,7 @@ sudo apt install zsh zsh-doc
 zsh --version    # Confirm proper installation
 ```
 
-[Change your default user shell](#change-default-user-shell) if needed.  
+[Change your default user shell](../README.md#change-default-user-shell) if needed.  
 Otherwise simply run `zsh` (right within `bash` or any other shell) to use it.
 
 You will be greeted by the Z Shell config function for new users, `zsh-newuser-install`.  

@@ -34,6 +34,42 @@ Otherwise simply run `zsh` (right within `bash` or any other shell) to use it.
 You will be greeted by the Z Shell config function for new users, `zsh-newuser-install`.  
 *Hit <kbd>q</kbd> to quit if you're going to install Oh My Zsh next.*
 
+Otherwise, `1 1 1 00 3 000 0 2 1 3 0 4 1 s 4 u 0`
+
+```
+The function will not be run in future, but you can run
+it yourself as follows:
+  autoload -Uz zsh-newuser-install
+  zsh-newuser-install -f
+
+The code added to ~/.zshrc is marked by the lines
+# Lines configured by zsh-newuser-install
+# End of lines configured by zsh-newuser-install
+You should not edit anything between these lines if you intend to
+run zsh-newuser-install again.  You may, however, edit any other part
+of the file.
+```
+
+```sh
+cat ~/.zshrc
+```
+
+```zshrc
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=1000000
+setopt autocd
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/hak/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+```
 
 
 

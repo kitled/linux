@@ -2,6 +2,10 @@
 
 Manage `user` accounts on Linux systems.
 
+> [!Tip]
+> - See [Rights](Rights.md) to manage user permissions ("mode") like `sudo` access and file `rwx` privileges.  
+> - See [Groups](Groups.md) as a complement to `user` features.
+
 ## Overview
 
 User accounts are a base requiremment of most operating systems (OS): all actions ("verbs" as I call it) must be performed by a known actor ("subject" in our grammatical metaphor).

@@ -7,12 +7,6 @@
 
 Manage physical drives and virtual storage spaces: format, mount, maintain.
 
-> [!Tip]
-> We manage a hypothetical  
-> - storage unit called `data`  
-> - located at `/mnt/data`  
-> - composed of physical drives aliased `$disk1`, `$disk2`, …, `$diskN`
-
 
 
 ### Table of contents
@@ -50,6 +44,14 @@ Generally:
 1. A formatted filesystem must finally be [mounted](mount.md) to **read/write** it.
     - Manually in your shell.
     - As a line in the `/etc/fstab` file to auto-mount at boot time.
+
+
+> [!Note]
+> In these notes, we manage a hypothetical  
+> - storage unit called `data`  
+> - located at `/mnt/data`  
+> - composed of physical drives aliased `$disk1`, `$disk2`, …, `$diskN`
+
 
 
 

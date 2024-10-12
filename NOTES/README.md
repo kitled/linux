@@ -24,17 +24,17 @@ Generally by alpha order, unless reasons.
 
 .  
 `└──` [**Shell**](Shell)  
-`     ├──` Bash  
-`     └──` Zsh  
+`    ├──` Bash  
+`    └──` Zsh  
 `├──` [**SSH**](SSH)  
-`│    ├──` [`config`](SSH/config.md)  
-`│    ├──` [`ssh-keygen`](SSH/ssh-keygen.md)  
-`│    ├──` [`sshd`](SSH/sshd.md) (OpenSSH Server)   
-`│    └──` [SCP](SSH/SCP.md) (Secure copy protocol)  
+`│   ├──` [`config`](SSH/config.md)  
+`│   ├──` [`ssh-keygen`](SSH/ssh-keygen.md)  
+`│   ├──` [`sshd`](SSH/sshd.md) (OpenSSH Server)   
+`│   └──` [SCP](SSH/SCP.md) (Secure copy protocol)  
 `└──` [**Storage**](Storage)  
-`     ├──` [Btrfs](Storage/Btrfs.md)  
-`     ├──` [XFS](Storage/XFS.md)  
-`     └──` [ZFS](Storage/ZFS.md)  
+`    ├──` [Btrfs](Storage/Btrfs.md)  
+`    ├──` [XFS](Storage/XFS.md)  
+`    └──` [ZFS](Storage/ZFS.md)  
 
 
 <!-- TEMPLATE

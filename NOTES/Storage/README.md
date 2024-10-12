@@ -56,7 +56,7 @@ Generally:
 >
 > My recommendations on Linux are:
 > - [Btrfs](Btrfs.md) for OS drives (single or mirrors)
-> - [XFS](XFS.md) for stripes (RAID 0)
+> - [XFS](XFS.md) for stripes (RAID 0) without COW
 > - [ZFS](ZFS.md) for everything else (non-OS: singles, raidz1~3, and mirrors)
  
 [**ZFS**](ZFS.md) is technically the best filesystem ever created in my opinion, but it's quite involved to setup well manually, and benefits a lot from several fast drives and as much RAM as you can give it.

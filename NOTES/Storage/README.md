@@ -1,14 +1,19 @@
 # Storage
 
+
+
+
 ## Overview
 
-Manage physical drives and virtual storage spaces.
+Manage physical drives and virtual storage spaces: format, mount, maintain.
 
 > [!Tip]
 > We manage a hypothetical  
 > - storage unit called `data`  
 > - located at `/mnt/data`  
 > - composed of physical drives aliased `$disk1`, `$disk2`, …, `$diskN`
+
+
 
 ### Table of contents
 
@@ -20,22 +25,33 @@ Manage physical drives and virtual storage spaces.
 `└──` [**ZFS**](ZFS.md)  
 
 
+
+
 ## What you need to know
+
+> [!Tip]
+> **TL;DR**
+> - if multiple drives, create the [`mdadm`](mdadm.md) array first.  
+(Except for [ZFS](ZFS.md) and [Btrfs](Btrfs.md) which feature built-in device management)  
+>
+>- In all cases, [format](#choosing-a-filesystem), for instance in [XFS](XFS.md), and finally [mount](mount.md) the partition.
 
 Generally:
 
-1. \[ *Optionally* \] **Multiple drives** may be grouped in an **array**.
-    - This can be achieved at the hardware or software level (e.g., using [**`mdadm`**](mdadm.md)).  
-        - **Software RAID** is usually what you want (it's portable, easier, and robust).
+1. \[ *Optional* \] **Multiple drives** may be grouped in an **array**.
     - You must **do it first**, before formatting.
-1. A drive or array must be **formatted** using a [filesystem](#choosing-a-filesystem).
-1. A formatted filesystem must finally be [mounted](#mount) to **read/write** it.
+    - This can be achieved at the hardware or software level.
+    - **Software RAID** (e.g., using [**`mdadm`**](mdadm.md)) is usually what you want.
+        - Easier to manage (notably, no need to reboot to some BIOS tool).
+        - Guaranteed portability between machines.
+            - You just replug all drives and remake the same setup (install packages & copy config files).
+        - Very robust as it integrates tightly with the OS.
+1. A drive or array must be **formatted** using a [filesystem](#choosing-a-filesystem). If in doubt, use [XFS](XFS.md).
+1. A formatted filesystem must finally be [mounted](mount.md) to **read/write** it.
+    - Manually in your shell.
+    - As a line in the `/etc/fstab` file to auto-mount at boot time.
 
-For [ZFS](#zfs) and [Btrfs](#btrfs), these principles stand, but head over to their dedicated section as they manage things their own way.
 
-
-
-Create the `mdadm` array first, except for ZFS and Btrfs which feature built-in device management.
 
 
 

@@ -1,8 +1,8 @@
 # Storage
 
-*Basic procedures to manage filesystems relevant to GHost (XFS, Btrfs, and ZFS) in a number of ways including software RAID.*
-
 ## Overview
+
+Manage physical drives and virtual storage spaces.
 
 > [!Tip]
 > We manage a hypothetical  

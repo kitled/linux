@@ -46,31 +46,37 @@ Generally:
     - As a line in the `/etc/fstab` file to auto-mount at boot time.
 
 
-> [!Note]
-> In these notes, we manage a hypothetical  
-> - storage unit called `data`  
-> - located at `/mnt/data`  
-> - composed of physical drives aliased `$disk1`, `$disk2`, …, `$diskN`
-
-
-
 
 
 
 ## Choosing a filesystem
 
-See notes in this directory for detailed procedures (links below, inline).
+> [!Tip]
+> **TL;DR**
+>
+> My recommendations on Linux are:
+> - [Btrfs](Btrfs.md) for OS drives
+> - [XFS](XFS.md) for stripes (RAID 0)
+> - [ZFS](ZFS.md) for everything else
 
-[**ZFS**](ZFS.md) is technically the best filesystem ever created in my opinion, but it's quite involved to setup well manually, and requires quite a bit of RAM.
+[**ZFS**](ZFS.md) is technically the best filesystem ever created in my opinion, but it's quite involved to setup well manually, and benefits a lot from several fast drives and as much RAM as you can give it.
 
 [**XFS**](XFS.md) (or even Ext4) is fine for most cases.
 
-If you have special needs:
-- for large arrays that benefit from redundancy, consider (RAIDZ is awesomely robust; RAID1/mirror is insanely powerful; RAID0/stripe mode isn't particularly noteworthy).
-- for OS drives, [**Btrfs**](Btrfs.md) shines on Linux (but **NEVER** in raid 5 or 6). It has nice rollback features. A Btrfs mirror is as safe and easy as it gets for Linux OS partitions.
+For large arrays that benefit from redundancy, chose ZFS (RAIDZ is awesomely robust; RAID1/mirror is insanely powerful; RAID0/stripe mode isn't particularly noteworthy).
+
+For OS drives, [**Btrfs**](Btrfs.md) shines on Linux (but **NEVER** in raid 5 or 6). It has nice rollback features. A Btrfs mirror is as safe and easy as it gets for Linux OS partitions.
 
 *Note that [Bcachefs](https://bcachefs.org/) looks promising but is too new in my opinion.*
 
+
+
+## Meta
+
+In these notes, we manage a hypothetical  
+- storage unit called `data`  
+- located at `/mnt/data`  
+- composed of physical drives aliased `$disk1`, `$disk2`, …, `$diskN`
 
 
 

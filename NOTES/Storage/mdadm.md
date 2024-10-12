@@ -1,7 +1,8 @@
 # `mdadm`
 > ***M**ultiple **D**evices **Adm**inistration*
 
-`mdadm` *(**m**ultiple **d**evices **adm**inistration) lets us "merge" storage devices in RAID arrays, which are then seen (and formatted) as one virtual device (for increased capacity, reliability, and/or performance).*
+`mdadm` *(**m**ultiple **d**evices **adm**inistration) lets us 'merge' or 'group' several storage devices in RAID (redundant **array** of inexpensive/independent disks).  
+An array is then seen, formatted, and used as one single \[ virtual \] device for increased capacity, reliability, and/or performance.*
 
 📘`man`: [`mdadm`][man-mdadm]
 

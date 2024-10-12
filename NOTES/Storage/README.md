@@ -24,9 +24,10 @@
 
 Generally:
 
-1. \[optional\] **Multiple drives** must first be grouped in an **array**.
+1. \[ *Optionally* \] **Multiple drives** may be grouped in an **array**.
     - This can be achieved at the hardware or software level (e.g., using [**`mdadm`**](mdadm.md)).  
-    - Software RAID is usually what you want (it's portable, easier, and robust).
+        - **Software RAID** is usually what you want (it's portable, easier, and robust).
+    - You must **do it first**, before formatting.
 1. A drive or array must be **formatted** using a [filesystem](#choosing-a-filesystem).
 1. A formatted filesystem must finally be [mounted](#mount) to **read/write** it.
 

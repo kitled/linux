@@ -32,9 +32,9 @@ Generally by alpha order, unless reasons.
 `│    ├──` [`sshd`](SSH/sshd.md) (OpenSSH Server)   
 `│    └──` [SCP](SSH/SCP.md) (Secure copy protocol)  
 `└──` [**Storage**](Storage)  
-`     ├──` Btrfs  
-`     ├──` XFS  
-`     └──` ZFS  
+`     ├──` [Btrfs](Storage/Btrfs.md)  
+`     ├──` [XFS](Storage/XFS.md)  
+`     └──` [ZFS](Storage/ZFS.md)  
 
 
 <!-- TEMPLATE

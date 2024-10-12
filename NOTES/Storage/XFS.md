@@ -194,14 +194,6 @@ Change `n` and RAID level `l` to suit your needs.
 > After reboot, the `mdadm` RAID virtual device MAY be given a different name by **udev**.  
 *In my case, it's `md127` instead of `md0`.*
 
-From now on, we'll alias this filesystem mountpoint to `$NX_FS`: adjust the path for you if needed.
-
-```sh
-NX_FS='/fs'
-NX_FS_LABEL='fs'
-```
-
-
 
 
 
@@ -287,3 +279,6 @@ NX_FS_LABEL='fs'
 
 
 
+[man-xfs]: https://manpages.ubuntu.com/manpages/noble/en/man5/xfs.5.html
+[man-mkfs.xfs]: https://manpages.ubuntu.com/manpages/noble/en/man8/mkfs.xfs.8.html
+[man-chattr]: https://manpages.ubuntu.com/manpages/noble/en/man1/chattr.1.html

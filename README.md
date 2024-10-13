@@ -6,10 +6,12 @@ Notes on all things Linux.
 > [!Tip]
 > Start here: [NOTES](/NOTES/README.md)
 
+<!--
+
+
 ----
 
 
-<!--
 
 ## How to use
 

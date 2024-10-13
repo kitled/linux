@@ -8,9 +8,9 @@
 - **Install `tmux`**
 
   ```sh
-  sudo apt-get install tmux  # On Debian/Ubuntu
-  sudo yum install tmux      # On CentOS/RHEL
-  sudo dnf install tmux      # On Fedora
+  sudo apt install tmux    # On Debian/Ubuntu
+  sudo yum install tmux    # On CentOS/RHEL
+  sudo dnf install tmux    # On Fedora
   ```
 
 - **Start a tmux Session**:

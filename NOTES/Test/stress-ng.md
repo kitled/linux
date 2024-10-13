@@ -28,6 +28,8 @@ Stress-ng is a stress testing tool designed to exercise various physical subsyst
 
 ### Options
 
+- `--sequential N`: run all stressors for a given device class
+- `--class CLASS`: specify a device CLASS, for instance `cpu`
 - `--cpu`: specifies the number of CPU stressors to run
 - `--io`: specifies the number of I/O stressors to run
 - `--vm`: specifies the number of virtual memory stressors to run
@@ -41,7 +43,7 @@ Stress-ng is a stress testing tool designed to exercise various physical subsyst
 Stress CPU (all cores) for 1 minute, using matrix computations, showing result metrics.
 
 ```sh
-stress-ng --matrix -1 --tz -t 60 --metrics-brief -v
+stress-ng --matrix -1 --tz -t 60 --metrics-brief -v --thermalstat 6
 ```
 
 > https://askubuntu.com/a/937274
@@ -51,7 +53,7 @@ stress-ng --matrix -1 --tz -t 60 --metrics-brief -v
 > There are many ways to exercise the CPU, with `stress-ng` one can tell it to run all the stressors that can stress a CPU using:
 > 
 > ```sh
-> stress-ng --class cpu --sequential 0 -t 60 -v
+> stress-ng --class cpu --sequential 0 -t 1m -v
 > ```
 > 
 > ..and to check the temperatures from the thermal zone information, one can use:
@@ -75,6 +77,11 @@ stress-ng --matrix -1 --tz -t 60 --metrics-brief -v
 > ```sh
 > stress-ng --help | less
 > ```
+
+
+hot temp:
+- ipsec-mb
+- jpeg
 
 
 <!--

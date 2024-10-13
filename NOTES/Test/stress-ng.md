@@ -44,7 +44,7 @@ docker run -it --rm alexeiled/stress-ng --cpu 4 --io 2 --vm 1 --vm-bytes 1G --ti
 ```
 
 
-> [!Important]
+> [!Caution]
 >
 > Running stress-ng with root privileges can make stressors unkillable in low memory situations, so use with caution.  
 > The tool can be used to test system performance changes between kernel versions or compiler versions, but it’s not intended as a scientifically accurate benchmarking metric.  

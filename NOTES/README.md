@@ -23,9 +23,9 @@ Generally by alpha order, unless reasons.
 
 
 .  
-`└──` [**Shell**](Shell)  
-`    ├──` Bash  
-`    └──` Zsh  
+`├──` [**Shell**](Shell)  
+`│   ├──` Bash  
+`│   └──` Zsh  
 `├──` [**SSH**](SSH)  
 `│   ├──` [`config`](SSH/config.md)  
 `│   ├──` [`ssh-keygen`](SSH/ssh-keygen.md)  

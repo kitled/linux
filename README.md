@@ -9,7 +9,7 @@ Notes on all things Linux.
 ----
 
 
-
+<!--
 
 ## How to use
 
@@ -89,7 +89,7 @@ Use a shell function (or simple alias) to quickly pull notes, like the `man` or 
 
 
 
-
+<!--
 
 ## Structure
 

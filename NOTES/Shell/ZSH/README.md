@@ -149,7 +149,7 @@ E.g.,
 > Don't add too many (strict need-to basis), as it may slow down shell startup.
 
 
-### zsh-autosuggestions
+#### zsh-autosuggestions
 
 https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
@@ -171,7 +171,7 @@ https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zs
 3. Restart zsh (such as by opening a new instance of your terminal emulator).
 
 
-### zsh-syntax-highlighting
+#### zsh-syntax-highlighting
 
 https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
 

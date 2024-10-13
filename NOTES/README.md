@@ -25,7 +25,7 @@ Generally by alpha order, unless reasons.
 > ⚠️ This is work-in-progress, take this list as a TODO (a lot may be missing at any time).
 
 
-.  
+`.`  
 `├──` [**Shell**](Shell)  
 `│   ├──` Bash  
 `│   └──` [Zsh](Shell/ZSH)  

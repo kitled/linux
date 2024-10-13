@@ -38,11 +38,46 @@ Stress-ng is a stress testing tool designed to exercise various physical subsyst
 
 ### Examples
 
-Run with verbose output and brief metrics reporting:
+Stress CPU (all cores) for 1 minute, using matrix computations, showing result metrics.
 
 ```sh
-stress-ng --verbose --metrics-brief
+stress-ng --matrix -1 --tz -t 60 --metrics-brief -v
 ```
+
+> https://askubuntu.com/a/937274
+>
+> As the author of stress-ng, I'd personally recommend it as it has a wide range of stress tests that can be used to exercise the CPU in many different ways.
+> 
+> There are many ways to exercise the CPU, with `stress-ng` one can tell it to run all the stressors that can stress a CPU using:
+> 
+> ```sh
+> stress-ng --class cpu --sequential 0 -t 60 -v
+> ```
+> 
+> ..and to check the temperatures from the thermal zone information, one can use:
+> 
+> ```sh
+> stress-ng --class cpu --sequential 4 -t 60 -v --tz
+> ```
+> 
+> The above will run the cpu class of stressors one by one (sequentially) for 60 seconds with verbose mode enabled and with thermal zone stats on 4 CPUs.
+> 
+> Or one can run specific stressors, such as:
+> 
+> ```sh
+> stress-ng --matrix 0 -t 2m
+> ```
+> 
+> ..this will run the matrix stressor for 2 minutes on all the CPUs (0 = all CPUs).
+> 
+> The manual with `stress-ng` details all the options. There are over 170 stressors to play with. To see all the stressors, use:
+> 
+> ```sh
+> stress-ng --help | less
+> ```
+
+
+<!--
 
 Run in a Docker image; parallel stressors with 4 CPU, 2 I/O, and 1 VM stressor, using 1GB of virtual memory; for 60 seconds: 
 
@@ -50,6 +85,7 @@ Run in a Docker image; parallel stressors with 4 CPU, 2 I/O, and 1 VM stressor, 
 docker run -it --rm alexeiled/stress-ng --cpu 4 --io 2 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
 ```
 
+-->
 
 
 

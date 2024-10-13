@@ -79,9 +79,7 @@ stress-ng --matrix -1 --tz -t 60 --metrics-brief -v --thermalstat 6
 > ```
 
 
-hot temp:
-- ipsec-mb
-- jpeg
+hottest temp: `--vecwide`
 
 
 <!--

@@ -1,6 +1,13 @@
 # ZFS
 
 
+> [!Info]
+> 🏛️ https://openzfs.org  
+> 🧬 https://github.com/openzfs/zfs  
+> 📚 https://openzfs.github.io/openzfs-docs  
+
+
+
 
 ## Overview
 
@@ -38,9 +45,9 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 
 #### Debian
 
-🔗 https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/index.html
+🔗 Installation: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/index.html
 
 #### Ubuntu
 
-🔗 https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/index.html
+🔗 Installation: https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/index.html
 

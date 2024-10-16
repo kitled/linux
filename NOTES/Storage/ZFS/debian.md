@@ -48,7 +48,7 @@ ZFS packages are included in the [contrib repository](https://packages.debian.or
     sudo apt install dpkg-dev linux-headers-generic linux-image-generic
     ```
 
-1. Install the ZFS packages (see [`stdout`][^out2]).
+1. Install the ZFS packages.[^out2]
 
     ```sh
     sudo apt install zfs-dkms zfsutils-linux 

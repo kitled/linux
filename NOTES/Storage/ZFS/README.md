@@ -8,11 +8,17 @@
 > [!Tip]
 > Quick Start:
 >
-> 1. Install ZFS.
-> 1. Create a pool (array of drives).
-> 1. Create a dataset with mountpoint.
+> 1. [Install](Debian.md) ZFS.
+> 1. Either:
+>     - [`zpool import`](zpool.md#import) an existing pool. Done.
+>     - [`zpool create`](zpool.md#create) a new one,
+>         - [`zfs create`](zfs.md#datasets) a dataset. Done.
 >
-> Done.
+> ⚠️ Setup `zpool scrub` on a timer!
+
+
+
+
 
 ## Overview
 

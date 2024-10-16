@@ -14,6 +14,8 @@
 > 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  
 > 📑 [`Wiki`][wiki] [openzfs.org/**wiki**][wiki]  
 
+### Features
+
 OpenZFS is an open-source storage platform. It includes the functionality of both traditional file systems and volume manager. It has many advanced features including:
 
 - Protection against data corruption. Integrity checking for both data and metadata.
@@ -25,6 +27,11 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 - Efficient storage with snapshots and copy-on-write clones
 - Efficient local or remote replication — send only changed blocks with ZFS send and receive
 
+### Administration
+
+ZFS administration uses two main utilities. 
+- The [`zpool`](zpool.md) utility controls the operation of the pool and allows adding, removing, replacing, and managing disks. 
+- The [`zfs`](zfs.md) utility allows creating, destroying, and managing datasets, both [file systems](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-filesystem) and [volumes](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-volume).
 
 
 

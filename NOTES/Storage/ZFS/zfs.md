@@ -1,12 +1,14 @@
 # `zfs`
 
-Manage datasets.
+The `zfs` utility can create, destroy, and manage all existing ZFS datasets within a pool.
+
+> [!Note]
+> To manage the pool itself, use [`zpool`](zpool.md).
 
 ## Overview
 
 ⏩ `Handbook` https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zfs
-
-The `zfs` utility can create, destroy, and manage all existing ZFS datasets within a pool. To manage the pool itself, use [`zpool`](zpool.md).
+ 
 
 ## `create` & `destroy`
 

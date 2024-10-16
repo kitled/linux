@@ -57,6 +57,8 @@ ZFS packages are included in the [contrib repository](https://packages.debian.or
     The build step takes some time.  
     `Building initial module for 6.1.0-26-amd64`
 
+    If all goes well, it ends by creating a bunch of symlinks and running `update-initramfs`.
+
 > [!Caution]
 > If you are in a poorly configured environment (e.g. certain VM or container consoles), when `apt` attempts to pop up a message on first install, it may fail to notice a real console is unavailable, and instead appear to hang indefinitely. To circumvent this, you can prefix the apt install commands with `DEBIAN_FRONTEND=noninteractive`, like this:
 >
@@ -246,4 +248,6 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Setting up zfs-zed (2.2.6-1~bpo12+3) ...
     Created symlink /etc/systemd/system/zed.service → /lib/systemd/system/zfs-zed.service.
     Created symlink /etc/systemd/system/zfs.target.wants/zfs-zed.service → /lib/systemd/system/zfs-zed.service.
-    ```  
+    ```
+
+[^]: 

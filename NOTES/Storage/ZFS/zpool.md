@@ -21,6 +21,46 @@ ZFS administration uses two main utilities. The `zpool` utility controls the ope
 
 
 
+## `scrub`
+
+Routinely [scrub](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-scrub) pools, ideally at least once every month. The `scrub` operation is disk-intensive and will reduce performance while running. Avoid high-demand periods when scheduling `scrub` or use `vfs.zfs.scrub_delay` to adjust the relative priority of the `scrub` to keep it from slowing down other workloads.
+
+1. Run `scrub` on a given pool.
+
+    ```
+    # zpool scrub mypool
+    ```
+
+1. Check status.
+
+    ```
+    # zpool status
+    ```
+
+    ▼ 🖥️`stdout`
+
+    ```
+      pool: mypool
+     state: ONLINE
+      scan: scrub in progress since Wed Feb 19 20:52:54 2014
+            116G scanned out of 8.60T at 649M/s, 3h48m to go
+            0 repaired, 1.32% done
+    config:
+
+            NAME        STATE     READ WRITE CKSUM
+            mypool      ONLINE       0     0     0
+              raidz2-0  ONLINE       0     0     0
+                ada0p3  ONLINE       0     0     0
+                ada1p3  ONLINE       0     0     0
+                ada2p3  ONLINE       0     0     0
+                ada3p3  ONLINE       0     0     0
+                ada4p3  ONLINE       0     0     0
+                ada5p3  ONLINE       0     0     0
+
+    errors: No known data errors
+    ```
+
+
 
 ## `export` & `import`
 
@@ -44,7 +84,7 @@ Importing a pool automatically mounts the datasets.
     sudo zpool import
     ```
 
-    ⮟ `stdout`
+    ▼ 🖥️`stdout`
 
     ```
        pool: mypool
@@ -69,7 +109,7 @@ Importing a pool automatically mounts the datasets.
     sudo zfs list
     ```
 
-    ⮟ `stdout`
+    ▼ 🖥️`stdout`
 
     ```
     zfs list
@@ -90,7 +130,7 @@ Upgrade a v28 pool to support `Feature Flags`:
     ```sh
     # zpool status
     ```
-    ⮟ `stdout`
+    ▼ 🖥️`stdout`
     ```
       pool: mypool
      state: ONLINE
@@ -116,7 +156,7 @@ Upgrade a v28 pool to support `Feature Flags`:
     ```
     # zpool upgrade
     ```
-    ⮟ `stdout`
+    ▼ 🖥️`stdout`
     ```
     This system supports ZFS pool feature flags.
 
@@ -136,7 +176,7 @@ Upgrade a v28 pool to support `Feature Flags`:
     ```
     # zpool upgrade mypool
     ```
-    ⮟ `stdout`
+    ▼ 🖥️`stdout`
     ```
     This system supports ZFS pool feature flags.
 
@@ -147,6 +187,8 @@ Upgrade a v28 pool to support `Feature Flags`:
       lz4_compress
       multi_vdev_crash_dump
     ```
+
+
 
 
 

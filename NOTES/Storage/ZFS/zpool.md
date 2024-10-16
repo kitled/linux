@@ -14,7 +14,7 @@ The `zpool` utility controls the operation of the pool and allows adding, removi
 ⏩ `Handbook` https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zpool
 
 > [!Important]
-> If you already have pools setup in prior installations, skip to Import.
+> Skip to [`import`](#import) if you already have pools from prior installations.
 
 
 
@@ -147,7 +147,7 @@ Importing a pool automatically mounts the datasets.
               ada2p3    ONLINE
     ```
 
-1. Import the pool, optionally with an **alt**ernative **root** directory.
+1. Import the pool, optionally with an `altroot` (alternative root) directory.
 
     ```sh
     sudo zpool import -o altroot=/mnt mypool

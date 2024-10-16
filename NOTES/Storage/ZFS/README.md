@@ -2,8 +2,8 @@
 `•`  
 `├──` [**`zpool`**](zpool.md)  
 `├──` [**`zfs`**](zfs.md)  
-`├──` [**Debian**](debian.md) install  
-`└──` [**Ubuntu**](ubuntu.md) install  
+`├──` [**Debian**](Debian.md) install  
+`└──` [**Ubuntu**](Ubuntu.md) install  
 
 > [!Tip]
 > Quick Start:

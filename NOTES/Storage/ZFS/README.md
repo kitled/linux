@@ -4,7 +4,7 @@
 `└──` [**Ubuntu**](ubuntu.md)  
 
 > [!Tip]
-> Quick Start with the ⏩[`Handbook`](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start")[^handbook]
+> Quick Start with the ⏩[`Handbook`](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start")
 
 ## Overview
 
@@ -12,8 +12,8 @@
 > 🧬 [`Repo`][repo] [github.com/**openzfs/zfs**][repo]  
 > 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  
 > 📑 [`Wiki`][wiki] [openzfs.org/**wiki**][wiki]  
-> [⏩](## "Quick Start") [Handbook](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start")  
-> [🅰️](## "Arch wiki") [Arch wiki](https://wiki.archlinux.org/title/ZFS)
+> ⏩ [Handbook](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start") [^handbook]  
+> 🅰️ [Arch wiki](https://wiki.archlinux.org/title/ZFS)
 
 
 

@@ -2,10 +2,9 @@
 
 
 > [!Note]  
-> 🏛️ Home: [**openzfs.org**](https://openzfs.org)  
-> 🧬 Repo: [github.com/**openzfs/zfs**](https://github.com/openzfs/zfs)  
-> 📚 Docs: [**openzfs**.github.io/**openzfs-docs**](https://openzfs.github.io/openzfs-docs)  
-
+> 🏛️ Home: [**`openzfs.org`**](https://openzfs.org)  
+> 🧬 Repo: [`github.com/`**`openzfs/zfs`**](https://github.com/openzfs/zfs)  
+> 📚 Docs: [**`openzfs`**`.github.io/`**`openzfs-docs`**](https://openzfs.github.io/openzfs-docs)  
 
 
 
@@ -27,7 +26,7 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 
 ### ZoL (ZFS on Linux)
 
-🔗 https://zfsonlinux.org/
+🔗 [**`zfsonlinux.org`**](https://zfsonlinux.org/)
 
 ### Getting started
 

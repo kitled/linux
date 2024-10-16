@@ -1,6 +1,13 @@
 # Apps (GUI)
 
+Applications for Linux (Desktop).  
+I use KDE thus favor Qt over GTK.  
+Flatpak preferred (no `snap` or `appimage` if I can help it).
 
+<!--
+- CLI programs are generally under [NOTES/Shell](../Shell).
+- Hypermedia systems (webapps) to be found under [NOTES/Web](../Web).
+-->
 
 ## List
 

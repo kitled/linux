@@ -1,7 +1,9 @@
 # ZFS
 
 
-> [!Tip]  
+> [!Tip] 
+> 🌐 Links
+> 
 > 🏛️ [`Home`][home] [**openzfs.org**][home]  
 > 🧬 [`Repo`][repo] [github.com/**openzfs/zfs**][repo]  
 > 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  

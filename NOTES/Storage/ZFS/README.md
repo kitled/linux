@@ -4,7 +4,7 @@
 `└──` [**Ubuntu**](ubuntu.md)  
 
 > [!Tip]
-> Quick Start with the ⏩[`Handbook`](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start").[^handbook]
+> Quick Start with the ⏩[`Handbook`](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start")[^handbook]
 
 ## Overview
 

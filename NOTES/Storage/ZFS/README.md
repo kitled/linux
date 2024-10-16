@@ -21,7 +21,8 @@
 > 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  
 > 📑 [`Wiki`][wiki] [openzfs.org/**wiki**][wiki]  
 >
-> ⏩ [`Handbook`][hand][^handbook]  
+> Third-party  
+> ⏩ [`Handbook`][hand][^handbook])  
 > 🅰️ [`Arch`][arch]  
 
 

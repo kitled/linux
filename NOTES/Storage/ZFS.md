@@ -25,15 +25,14 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 
 ### Getting started
 
-🔗 https://openzfs.github.io/openzfs-docs/Getting%20Started/
+🔗 `Docs`☛ [Getting Started][getting-started]
 
 > To get started with OpenZFS refer to the provided documentation for your distribution. It will cover the recommended installation method and any distribution specific information. First time OpenZFS users are encouraged to check out Aaron Toponce’s [excellent documentation](https://pthree.org/2012/04/17/install-zfs-on-debian-gnulinux/).
 
-
-
-- How to install OpenZFS: https://openzfs.github.io/openzfs-docs/Getting%20Started/
-- OpenZFS manual pages: https://openzfs.github.io/openzfs-docs/man/
-- Feature Details. Detailed subsystem/feature blogs, on-disk format specifications: [Developer Resources](https://openzfs.org/wiki/Developer_resources)
+- OpenZFS manual pages  
+`Docs`☛ [man][man]
+- Feature Details. Detailed subsystem/feature blogs, on-disk format specifications  
+`Wiki`☛ [Developer Resources][dev]
 
 
 #### Debian
@@ -87,3 +86,11 @@ ZFS on Linux is the official port of OpenZFS to Linux (ZFS was born on Solaris a
 [docs]: https://openzfs.github.io/openzfs-docs/
 [wiki]: https://openzfs.org/wiki/
 [zol]: https://zfsonlinux.org/
+[getting-started]: https://openzfs.github.io/openzfs-docs/Getting%20Started/
+[man]: https://openzfs.github.io/openzfs-docs/man/
+[dev]: https://openzfs.org/wiki/Developer_resources
+
+
+
+
+

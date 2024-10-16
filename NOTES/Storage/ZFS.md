@@ -2,7 +2,7 @@
 
 
 > [!Note]  
-> 🏛️ [`Home`][^home] [**openzfs.org**][^home]  
+> 🏛️ [`Home`][home] [**openzfs.org**][home]  
 > 🧬 [`Repo`](https://github.com/openzfs/zfs) [github.com/**openzfs/zfs**](https://github.com/openzfs/zfs)  
 > 📚 [`Docs`](https://openzfs.github.io/openzfs-docs) [**openzfs**.github.io/**openzfs-docs**](https://openzfs.github.io/openzfs-docs)  
 > 📑 [`Wiki`](https://openzfs.org/wiki/) [openzfs.org/**wiki**](https://openzfs.org/wiki/)
@@ -57,10 +57,10 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 
 
 
-[^home]: https://openzfs.org
-[^repo]: https://github.com/openzfs/zfs
-[^docs]: https://openzfs.github.io/openzfs-docs
-[^wiki]: https://openzfs.org/wiki/
+[home]: https://openzfs.org
+[repo]: https://github.com/openzfs/zfs
+[docs]: https://openzfs.github.io/openzfs-docs
+[wiki]: https://openzfs.org/wiki/
 [^]: 
 [^]: 
 [^]: 

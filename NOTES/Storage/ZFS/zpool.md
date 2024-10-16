@@ -197,8 +197,8 @@ Upgrade a v28 pool to support `Feature Flags`:
             NAME        STATE     READ WRITE CKSUM
             mypool      ONLINE       0     0     0
               mirror-0  ONLINE       0     0     0
-    	    ada0    ONLINE       0     0     0
-    	    ada1    ONLINE       0     0     0
+    	        ada0    ONLINE       0     0     0
+    	        ada1    ONLINE       0     0     0
 
     errors: No known data errors
     ```

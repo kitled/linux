@@ -10,7 +10,8 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/
 
 https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/index.html#installation
 
-If you want to use ZFS as your root filesystem, see the [Root on ZFS](#root-on-zfs) section below instead.
+> [!Note]
+> If you want to use ZFS as your root filesystem, see the [Root on ZFS](#root-on-zfs) section below instead.
 
 ZFS packages are included in the [contrib repository](https://packages.debian.org/source/zfs-linux). The [backports repository](https://backports.debian.org/Instructions/) often provides newer releases of ZFS. You can use it as follows.
 

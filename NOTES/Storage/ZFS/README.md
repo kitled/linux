@@ -85,7 +85,7 @@ ZFS administration uses two main utilities.
 
 ### Ubuntu
 
-🔗 Installation: `Docs`☛ Getting Started/[Ubuntu][ubu]
+🔗 Installation: `Docs`☛ Getting Started / [Ubuntu][ubu]
 
 [ubu]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/
 

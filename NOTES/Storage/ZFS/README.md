@@ -16,7 +16,10 @@
 
 ## Overview
 
-> 🏛️ [`Home`][home] [**openzfs.org**][home]  
+> 🏛️ [`Home`][home] (General) [**openzfs.org**][home]  
+> 🐧 [`Home`][zol] (Linux) [**zfsonlinux.org**][zol]  
+>
+> Official  
 > 🧬 [`Repo`][repo] [github.com/**openzfs/zfs**][repo]  
 > 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  
 > 📑 [`Wiki`][wiki] [openzfs.org/**wiki**][wiki]  
@@ -49,7 +52,7 @@ ZFS administration uses two main utilities.
 
 
 
-### Getting started
+## Getting started
 
 🔗 `Docs`☛ [Getting Started][getting-started]
 
@@ -62,7 +65,7 @@ ZFS administration uses two main utilities.
 
 
 
-#### Debian
+### Debian
 
 🔗 Installation: `Docs`☛ Getting Started / [Debian][deb]
 
@@ -73,7 +76,7 @@ ZFS administration uses two main utilities.
 
 
 
-#### Ubuntu
+### Ubuntu
 
 🔗 Installation: `Docs`☛ Getting Started/[Ubuntu][ubu]
 
@@ -81,7 +84,7 @@ ZFS administration uses two main utilities.
 
 
 
-### Learn ZFS
+## Learn ZFS
 
 Official project recommendations
 
@@ -95,16 +98,6 @@ Tom Lawrence's excellent explanations
 - 
 - 
 - 
-
-
-
-
-
-## ZoL (ZFS on Linux)
-
-🔗 [**zfsonlinux.org**][zol]
-
-ZFS on Linux is the official port of OpenZFS to Linux (ZFS was born on Solaris and lives on FreeBSD first and foremost afaik). It used to be somewhat of a kernel pain to deal with ZFS versions on Linux, and to some extent it's still not supported in the kernel itself, hence rarely shows up as an option for root filesystem (Ubuntu 'vanilla' with Gnome stands out as a notable exception).
 
 
 

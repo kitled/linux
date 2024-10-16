@@ -26,7 +26,7 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 
 ### ZoL (ZFS on Linux)
 
-🔗 [**`zfsonlinux.org`**](https://zfsonlinux.org/)
+🔗 [**zfsonlinux.org**](https://zfsonlinux.org/)
 
 ### Getting started
 

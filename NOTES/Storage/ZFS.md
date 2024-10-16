@@ -2,15 +2,15 @@
 
 
 > [!Note]  
-> 🏛️ Home: [**openzfs.org**](https://openzfs.org)  
-> 🧬 Repo: [github.com/**openzfs/zfs**](https://github.com/openzfs/zfs)  
-> 📚 Docs: [**openzfs**.github.io/**openzfs-docs**](https://openzfs.github.io/openzfs-docs)  
+> 🏛️ [`Home`](https://openzfs.org) [**openzfs.org**](https://openzfs.org)  
+> 🧬 [`Repo`](https://github.com/openzfs/zfs) [github.com/**openzfs/zfs**](https://github.com/openzfs/zfs)  
+> 📚 [`Docs`](https://openzfs.github.io/openzfs-docs) [**openzfs**.github.io/**openzfs-docs**](https://openzfs.github.io/openzfs-docs)  
+> 📑 [`Wiki`](https://openzfs.org/wiki/) [openzfs.org/**wiki**](https://openzfs.org/wiki/)
 
 
 
 ## Overview
 
-Wiki: https://openzfs.org/wiki/Main_Page
 
 OpenZFS is an open-source storage platform. It includes the functionality of both traditional file systems and volume manager. It has many advanced features including:
 

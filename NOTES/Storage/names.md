@@ -6,14 +6,29 @@
 > - [`/dev/disk/by-partlabel`](#by-partlabel) for partitions (easy & reliable)
 
 
-
-
-
 ## Persistent block device naming
 
 https://wiki.archlinux.org/title/Persistent_block_device_naming
 
-There are four different schemes used for persistent naming by [`udev`](https://wiki.archlinux.org/title/Udev) (through 60-persistent-storage.rules): [`by-label`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-label), [`by-uuid`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-uuid), [`by-id and by-path`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-id_and_by-path). For those using disks with GUID Partition Table (GPT), two additional schemes can be used by-partlabel and by-partuuid.
+There are four different schemes used for persistent naming by [`udev`](https://wiki.archlinux.org/title/Udev) (through 60-persistent-storage.rules): [`by-label`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-label), [`by-uuid`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-uuid), [`by-id and by-path`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-id_and_by-path).  
+For those using disks with GUID Partition Table (GPT), two additional schemes can be used `by-partlabel` and `by-partuuid`.
+
+> [!Tip]
+> Once you have identified your disks/partitions, `export` your specific `<ids>` to environment variables to simplify shell commands (`zpool`, `mdadm`, …) referencing those block devices.
+> 
+> ```sh
+> # Disks
+> export DISK1="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S"
+> export DISK2="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F"
+> export DISK3="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811584D"
+> export DISK4="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811671K"
+> …
+>
+> # Partitions
+> export PART1="/dev/disk/by-partlabel/…"
+> export PART2="/dev/disk/by-partlabel/…"
+> …
+> ```
 
 
 

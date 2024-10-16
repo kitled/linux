@@ -35,17 +35,67 @@ The `zpool` utility controls the operation of the pool and allows adding, removi
 
 ### Using full disks
 
-Create a simple `mirror` pool:
+To create a ZFS pool:
 
 ```sh
-sudo zpool create mypool mirror /dev/sda dev/sdb
+sudo zpool create -f -o ashift=12 -m <mount> <pool> [raidz(2|3)|mirror] <ids>
 ```
 
-To create more than one `vdev` with a single command, specify groups of disks separated by the `vdev` type keyword, `mirror` in this example:
+- `create`: subcommand to create the pool.
+- `-f`: Force creating the pool.  
+This is to overcome the "EFI label error". See [#Does not contain an EFI label](https://wiki.archlinux.org/title/ZFS#Does_not_contain_an_EFI_label).
+- `-o ashift=12`: Because correct detection of 4k disks is not reliable, `-o ashift=12` should always be specified during pool creation.
+- `-m`: The mount point of the pool.  
+If this is not specified, then the pool will be mounted to `/<pool>`.
+- `pool`: This is the name of the pool.
+- `raidz(2|3)|mirror`: This is the type of virtual device that will be created from the list of devices.  
+`raidz` is a single disk of parity (similar to raid5), `raidz2` for 2 disks of parity (similar to raid6) and `raidz3` for 3 disks of parity.  
+Also available is `mirror`, which is similar to raid1 or raid10, but is not constrained to just 2 device.  
+If not specified, each device will be added as a `vdev` which is similar to raid0. After creation, a device can be added to each single drive `vdev` to turn it into a `mirror`, which can be useful for migrating data.
+- `ids`: The ID's of the drives or partitions that to include into the pool.
+
+> [!Tip]
+> `export` your specific `<ids>` to environment variables to simplify these commands.
+> 
+> ```sh
+> export DISK1="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S"
+> export DISK2="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F"
+> export DISK3="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811584D"
+> export DISK4="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811671K"
+> ```
+
+For example, simple stripe:
 
 ```sh
-sudo zpool create mypool mirror \
-/dev/sda /dev/sdb mirror /dev/sdc /dev/sdd
+sudo zpool create -f -o ashift=12 -m /mnt/data bigdata \
+  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S \
+  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F \
+  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811584D \
+  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811671K
+```
+
+
+Create pool with single raidz vdev:
+
+```sh
+sudo zpool create -f -m /mnt/data bigdata \
+                  raidz \
+                     $DISK1 \
+                     $DISK2 \
+                     $DISK3 \
+                     $DISK4
+```
+
+Create pool with two mirror vdevs:
+
+```sh
+sudo zpool create -f -m /mnt/data bigdata \
+                  mirror \
+                     $DISK1 \
+                     $DISK2 \
+                  mirror \
+                     $DISK3 \
+                     $DISK4
 ```
 
 

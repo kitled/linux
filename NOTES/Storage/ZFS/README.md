@@ -15,7 +15,8 @@
 >         - [`zfs create`](zfs.md#datasets) a dataset. Done.
 >
 > ⚠️ Setup [`zpool scrub`](zpool.md#scrub) on a timer!
-
+>
+> See ⏩`Handbook`☛ [Quick Start Guide](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-quickstart-single-disk-pool) for a TL;DR of basic features.
 
 
 
@@ -107,10 +108,14 @@ Tom Lawrence's excellent explanations
 
 
 
+> ⏩`Handbook`☛ [**What Makes ZFS Different**](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-differences)
+>
+> More than a file system, ZFS is fundamentally different from traditional file systems. Combining the traditionally separate roles of volume manager and file system provides ZFS with unique advantages. The file system is now aware of the underlying structure of the disks. Traditional file systems could exist on a single disk alone at a time. If there were two disks then creating two separate file systems was necessary. A traditional hardware RAID configuration avoided this problem by presenting the operating system with a single logical disk made up of the space provided by physical disks on top of which the operating system placed a file system. Even with software RAID solutions like those provided by GEOM, the UFS file system living on top of the RAID believes it’s dealing with a single device. ZFS' combination of the volume manager and the file system solves this and allows the creation of file systems that all share a pool of available storage. One big advantage of ZFS' awareness of the physical disk layout is that existing file systems grow automatically when adding extra disks to the pool. This new space then becomes available to the file systems. ZFS can also apply different properties to each file system. This makes it useful to create separate file systems and datasets instead of a single monolithic file system.
 
 
 
 
+## Footnotes
 
 [^handbook]: Written for FreeBSD, but ZFS commands (`zpool`, `zfs`) are the same.
 

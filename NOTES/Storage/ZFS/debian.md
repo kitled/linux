@@ -41,42 +41,22 @@ ZFS packages are included in the [contrib repository](https://packages.debian.or
     Pin-Priority: 990
     ```
 
-1. Install generic Linux headers and image for your system.
+1. Install generic Linux headers and image for your system.  
+    See [`stdout`][^out1]
 
     ```sh
     sudo apt update
     sudo apt install dpkg-dev linux-headers-generic linux-image-generic
     ```
 
-```sh
-sudo apt install dpkg-dev linux-headers-generic linux-image-generic
-```
+    ```sh
+    sudo apt install dpkg-dev linux-headers-generic linux-image-generic
+    ```
 
-⮟ [`stdout`][^out1] ⮟
-
-1. Install the ZFS packages.
+1. Install the ZFS packages (see [`stdout`][^out2]).
 
     ```sh
     sudo apt install zfs-dkms zfsutils-linux 
-    ```
-    
-    ⮟ `stdout` ⮟
-    
-    ```
-    Reading package lists... Done
-    Building dependency tree... Done
-    Reading state information... Done
-    The following additional packages will be installed:
-      dkms libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-zed
-    Suggested packages:
-      menu debhelper nfs-kernel-server samba-common-bin zfs-initramfs | zfs-dracut
-    The following NEW packages will be installed:
-      dkms libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-dkms 
-      zfs-zed zfsutils-linux
-    0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
-    Need to get 4,788 kB of archives.
-    After this operation, 26.9 MB of additional disk space will be used.
-    Do you want to continue? [Y/n] 
     ```
 
 > [!Caution]
@@ -100,7 +80,7 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 
 
-[^out1]: `sudo apt install dpkg-dev linux-headers-generic linux-image-generic`  
+[^out1]: ⮟ `stdout` for `sudo apt install dpkg-dev linux-headers-generic linux-image-generic`  
     ```
     Reading package lists... Done
     Building dependency tree... Done
@@ -152,4 +132,20 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Do you want to continue? [Y/n]
     ```
 
-[^out2]: 
+[^out2]: ⮟ `stdout` for `sudo apt install zfs-dkms zfsutils-linux`  
+    ```
+    Reading package lists... Done
+    Building dependency tree... Done
+    Reading state information... Done
+    The following additional packages will be installed:
+      dkms libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-zed
+    Suggested packages:
+      menu debhelper nfs-kernel-server samba-common-bin zfs-initramfs | zfs-dracut
+    The following NEW packages will be installed:
+      dkms libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-dkms 
+      zfs-zed zfsutils-linux
+    0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+    Need to get 4,788 kB of archives.
+    After this operation, 26.9 MB of additional disk space will be used.
+    Do you want to continue? [Y/n] 
+    ```

@@ -19,22 +19,22 @@ To install the ZFS utilities, first make sure `universe` is enabled.
 
 1. Open `/etc/apt/sources.list`
 
-```sh
-sudo nano /etc/apt/sources.list
-```
+    ```sh
+    sudo nano /etc/apt/sources.list
+    ```
 
 1. Write:
 
-```
-deb http://archive.ubuntu.com/ubuntu <CODENAME> main universe
-```
+    ```
+    deb http://archive.ubuntu.com/ubuntu <CODENAME> main universe
+    ```
 
 1. Then install `zfsutils-linux`[^out1]
 
-```sh
-sudo apt update
-sudo apt install zfsutils-linux
-```
+    ```sh
+    sudo apt update
+    sudo apt install zfsutils-linux
+    ```
 
 
 
@@ -51,7 +51,7 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 [^out1]: `stdout` for `sudo apt install zfsutils-linux`  
     ⮟  
-    
+
     ``` 
     Reading package lists... Done
     Building dependency tree... Done

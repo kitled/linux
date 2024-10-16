@@ -32,8 +32,8 @@ deb http://archive.ubuntu.com/ubuntu <CODENAME> main universe
 1. Then install `zfsutils-linux`[^out1]
 
 ```sh
-apt update
-apt install zfsutils-linux
+sudo apt update
+sudo apt install zfsutils-linux
 ```
 
 
@@ -49,9 +49,8 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 ## Footnotes
 
-[^out1]: ⮟ `stdout` for `sudo apt install dpkg-dev linux-headers-generic linux-image-generic`  
-    ```
-    sudo apt install zfsutils-linux 
+[^out1]: ⮟ `stdout` for `sudo apt install zfsutils-linux`  
+    ``` 
     Reading package lists... Done
     Building dependency tree... Done
     Reading state information... Done
@@ -69,6 +68,7 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Need to get 2,356 kB of archives.
     After this operation, 7,393 kB of additional disk space will be used.
     Do you want to continue? [Y/n] 
+    
     Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnvpair3linux amd64 2.2.2-0ubuntu9.1 [61.6 kB]
     Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuutil3linux amd64 2.2.2-0ubuntu9.1 [52.7 kB]
     Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libzfs4linux amd64 2.2.2-0ubuntu9.1 [226 kB]

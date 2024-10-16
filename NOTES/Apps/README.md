@@ -1,8 +1,10 @@
 # Apps (GUI)
 
-Applications for Linux (Desktop).  
+General purpose applications for Linux (Desktop).  
 I use KDE thus favor Qt over GTK.  
 Flatpak preferred (no `snap` or `appimage` if I can help it).
+
+If an app isn't listed here, it's probably in some ad hoc note — search this repo.
 
 <!--
 - CLI programs are generally under [NOTES/Shell](../Shell).

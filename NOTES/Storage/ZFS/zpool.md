@@ -23,7 +23,7 @@ The `zpool` utility controls the operation of the pool and allows adding, removi
 ## `create`
 
 > [!Important]
-> Make sure you have [persistent block device names](../names.md) for the relevant disks or partitions.
+> Make sure you have [persistent block device names](../names.md#persistent-block-device-naming) for the relevant disks or partitions.
 >
 > ```sh
 > ls -l /dev/disk/by-id/          # for disks

@@ -16,6 +16,35 @@ The `zpool` utility controls the operation of the pool and allows adding, removi
 
 ## `create`
 
+Examples.
+
+### Using full disks
+
+Create a simple `mirror` pool:
+
+```sh
+sudo zpool create mypool mirror /dev/sda dev/sdb
+```
+
+To create more than one `vdev` with a single command, specify groups of disks separated by the `vdev` type keyword, `mirror` in this example:
+
+```sh
+sudo zpool create mypool mirror \
+/dev/sda /dev/sdb mirror /dev/sdc /dev/sdd
+```
+
+### Using partitions
+
+Pools can also use partitions rather than whole disks. Putting ZFS in a separate partition allows the same disk to have other partitions for other purposes. In particular, it allows adding partitions with bootcode and file systems needed for booting. This allows booting from disks that are also members of a pool. ZFS adds no performance penalty on FreeBSD when using a partition rather than a whole disk. Using partitions also allows the administrator to *underprovision* the disks, using less than the full capacity. If a future replacement disk of the same nominal size as the original actually has a slightly smaller capacity, the smaller partition will still fit, using the replacement disk.
+
+Create a [RAID-Z2](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-vdev-raidz) pool using partitions:
+
+```sh
+sudo zpool create mypool raidz2 \
+/dev/sda1 /dev/sdb1 /dev/sdc1 /dev/sdd1 \
+/dev/sde1 /dev/sdf1
+```
+
 
 
 
@@ -27,13 +56,13 @@ Routinely [scrub](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-scrub
 1. Run `scrub` on a given pool.
 
     ```
-    # zpool scrub mypool
+    sudo zpool scrub mypool
     ```
 
 1. Check status.
 
     ```
-    # zpool status
+    sudo zpool status
     ```
 
     ▼ 🖥️`stdout`
@@ -127,7 +156,7 @@ Upgrade a v28 pool to support `Feature Flags`:
 1. Check `status` to see if pools may be updated.
 
     ```sh
-    # zpool status
+    sudo zpool status
     ```
     ▼ 🖥️`stdout`
     ```
@@ -153,7 +182,7 @@ Upgrade a v28 pool to support `Feature Flags`:
 1. Query `zpool upgrade`
 
     ```
-    # zpool upgrade
+    sudo zpool upgrade
     ```
     ▼ 🖥️`stdout`
     ```
@@ -173,7 +202,7 @@ Upgrade a v28 pool to support `Feature Flags`:
 1. Do the `upgrade`.
 
     ```
-    # zpool upgrade mypool
+    sudo zpool upgrade mypool
     ```
     ▼ 🖥️`stdout`
     ```

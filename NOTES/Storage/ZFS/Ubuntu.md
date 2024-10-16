@@ -29,7 +29,7 @@ sudo nano /etc/apt/sources.list
 deb http://archive.ubuntu.com/ubuntu <CODENAME> main universe
 ```
 
-1. Then install `zfsutils-linux`
+1. Then install `zfsutils-linux`[^out1]
 
 ```sh
 apt update

@@ -41,15 +41,10 @@ ZFS packages are included in the [contrib repository](https://packages.debian.or
     Pin-Priority: 990
     ```
 
-1. Install generic Linux headers and image for your system.  
-    See [`stdout`][^out1]
+1. Install generic Linux headers and image for your system.[^out1]
 
     ```sh
     sudo apt update
-    sudo apt install dpkg-dev linux-headers-generic linux-image-generic
-    ```
-
-    ```sh
     sudo apt install dpkg-dev linux-headers-generic linux-image-generic
     ```
 

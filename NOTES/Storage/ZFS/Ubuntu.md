@@ -49,7 +49,9 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 ## Footnotes
 
-[^out1]: ⮟ `stdout` for `sudo apt install zfsutils-linux`  
+[^out1]: `stdout` for `sudo apt install zfsutils-linux`  
+    ⮟  
+    
     ``` 
     Reading package lists... Done
     Building dependency tree... Done

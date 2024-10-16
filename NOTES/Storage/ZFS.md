@@ -40,13 +40,20 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 
 #### Debian
 
-🔗 Installation: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/
+🔗 Installation: `Docs`☛ Getting Started / [Debian][deb]
+
+🔗 Root on ZFS: `Docs`☛ Getting Started / Debian / [Debian Bookworm Root on ZFS][deb12-zfs-root]
+
+[deb]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/
+[deb12-zfs-root]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookworm%20Root%20on%20ZFS.html
 
 
 
 #### Ubuntu
 
-🔗 Installation: https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/
+🔗 Installation: `Docs`☛ Getting Started/[Ubuntu][ubu]
+
+[ubu]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/
 
 
 

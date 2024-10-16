@@ -23,4 +23,7 @@ If an app isn't listed here, it's probably in some ad hoc note — search this r
 🔽 Downloads: https://qalculate.github.io/downloads.html  
 Flatpak: https://flathub.org/apps/io.github.Qalculate.qalculate-qt
 
+A good calculator; much better than the weirdly puzzling KCalc.
+
+
 

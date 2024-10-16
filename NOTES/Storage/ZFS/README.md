@@ -4,7 +4,7 @@
 `└──` [**Ubuntu**](ubuntu.md)  
 
 > [!Tip]
-> ⏩ [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/zfs/) | 🅰️ [Arch wiki](https://wiki.archlinux.org/title/ZFS) | 
+> ⏩ [Handbook](https://docs.freebsd.org/en/books/handbook/zfs/) | 🅰️ [Arch wiki](https://wiki.archlinux.org/title/ZFS) | 
 
 
 ## Overview

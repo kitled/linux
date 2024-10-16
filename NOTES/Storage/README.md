@@ -34,22 +34,25 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 > 
 > - If using [XFS](XFS.md) (or Ext4) with multiple drives:
 >     - Create the [`mdadm`](mdadm.md) array first
->     - Then [format](#choosing-a-filesystem)
->     - Finally [mount](mount.md) the partition
+>     - Then [format](XFS.md#example-setup) it.
+>     - Finally [`mount`](mount.md) the partition
 
 Generally:
 
 1. \[ *Optional* \] **Multiple drives** may be grouped in an **array**.
     - You must **do it first**, before formatting.
     - This can be achieved at the hardware or software level.
-    - **Software RAID** (e.g., using [**`mdadm`**](mdadm.md)) is usually what you want.
+    - **Software RAID** (e.g., using `mdadm`) is usually what you want.
+        - That's what ZFS and Btrfs do in their own device management.
         - Easier to manage (notably, no need to reboot to some BIOS tool).
         - Guaranteed portability between machines.
-            - You just replug all drives and remake the same setup (install packages & copy config files).
+            - You just replug all drives,
+            - and re-do the same setup.  
+            (install packages, copy config files, or run commands).
         - Very robust as it integrates tightly with the OS.
-1. A drive or array must be **formatted** using a [filesystem](#choosing-a-filesystem). If in doubt, use [XFS](XFS.md).
+1. A drive or array must be **formatted** using a [filesystem](#choosing-a-filesystem). ZFS and Btrfs do it automatically, XFS requires using `mkfs.xfs`.
 1. A formatted filesystem must finally be [mounted](mount.md) to **read/write** it.
-    - Manually in your shell.
+    - Manually in your shell (won't persist through reboot) using `mount`.
     - As a line in the `/etc/fstab` file to auto-mount at boot time.
 
 
@@ -66,15 +69,15 @@ Generally:
 > - [ZFS](ZFS.md) for everything else
 >     - [Root on ZFS](ZFS/README.md#root-on-zfs) for the brave!
  
-[**ZFS**](ZFS.md) is technically the best filesystem ever created in my opinion, but it's quite involved to setup well manually, and benefits a lot from several fast drives and as much RAM as you can give it.
+[**ZFS**](ZFS.md) is technically the best filesystem ever created in my opinion. It benefits a lot from a few fast drives for write/read caching, but above all ***as much RAM as you can give it***. [Learn ZFS](ZFS/README.md#learn-zfs) to understand why.
 
 [**XFS**](XFS.md) (or even Ext4) is fine for most cases.
 
-For large arrays that benefit from redundancy, chose ZFS (RAIDZ is awesomely robust; RAID1/mirror is insanely powerful; RAID0/stripe mode isn't particularly noteworthy).
+For large arrays that benefit from redundancy, use ZFS.
 
 For OS drives, [**Btrfs**](Btrfs.md) shines on Linux (but **NEVER** in raid 5 or 6). It has nice rollback features. A Btrfs mirror is as safe and easy as it gets for Linux OS partitions.
 
-*Note that [Bcachefs](https://bcachefs.org/) looks promising but is too new in my opinion.*
+
 
 
 
@@ -97,7 +100,7 @@ In these notes, we manage a hypothetical
 
 
 <!-- LINKS -->
-[names]: names.md
+[names]: names.md#persistent-block-device-naming
 
 <!--
 [man-]: 

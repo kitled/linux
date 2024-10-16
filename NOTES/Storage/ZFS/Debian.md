@@ -81,7 +81,9 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 ## Footnotes
 
-[^out1]: ⮟ `stdout` for `sudo apt install dpkg-dev linux-headers-generic linux-image-generic`  
+[^out1]: 🖥️`stdout` for `sudo apt install dpkg-dev linux-headers-generic linux-image-generic`  
+    ⮟
+
     ```
     Reading package lists... Done
     Building dependency tree... Done
@@ -133,7 +135,9 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Do you want to continue? [Y/n]
     ```
 
-[^out2]: ⮟ `stdout` for `sudo apt install zfs-dkms zfsutils-linux`  
+[^out2]: 🖥️`stdout` for `sudo apt install zfs-dkms zfsutils-linux`  
+    ⮟
+
     ```
     Reading package lists... Done
     Building dependency tree... Done
@@ -149,8 +153,10 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Need to get 4,788 kB of archives.
     After this operation, 26.9 MB of additional disk space will be used.
     Do you want to continue? [Y/n] 
-    ```  
-    ⮟  
+    ```
+
+    ⮟
+
     ```
      ┌─────────────────────────────────────────────────────────────────────────────────────┤ Configuring zfs-dkms ├──────────────────────────────────────────────────────────────────────────────────────┐
      │                                                                                                                                                                                                   │ 
@@ -166,8 +172,10 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
      │                                                                                              <Ok>                                                                                                 │ 
      │                                                                                                                                                                                                   │ 
      └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ 
-    ```  
-    ⮟  
+    ```
+
+    ⮟
+
     ```
     Get:1 http://deb.debian.org/debian bookworm/main amd64 dkms all 3.0.10-8+deb12u1 [48.7 kB]
     Get:2 http://deb.debian.org/debian bookworm-backports/contrib amd64 zfs-dkms all 2.2.6-1~bpo12+3 [2,416 kB]

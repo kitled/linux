@@ -42,7 +42,7 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 ## Footnotes
 
 
-[^out1]: `stdout` for `sudo add-apt-repository universe`  
+[^out1]: 🖥️`stdout` for `sudo add-apt-repository universe`  
     ⮟  
 
     ``` 
@@ -60,7 +60,7 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 
 
-[^out2]: `stdout` for `sudo apt install zfsutils-linux`  
+[^out2]: 🖥️`stdout` for `sudo apt install zfsutils-linux`  
     ⮟  
 
     ```

@@ -14,6 +14,7 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 `.` **Storage**  
 `├──` [**`mount`**](mount.md)  
 `├──` [**`mdadm`**](mdadm.md)  
+`├──` [**names**](names.md)  
 `├──` [**Btrfs**](Btrfs.md)  
 `├──` [**XFS**](XFS.md)  
 `└──` [**ZFS**](ZFS)  
@@ -25,7 +26,7 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 
 > [!Tip]
 > **TL;DR**
-> - Always use [persistent device names][^names], like UUID, WWM, or some `[part]label`.
+> - Always use **persistent device [names][names]**, like hardware serial (in `/dev/disk/by-id`), UUID, WWM, or ``by-partlabel`.
 > 
 > - if multiple drives, create the [`mdadm`](mdadm.md) array first.  
 (Except for [ZFS](ZFS) and [Btrfs](Btrfs.md) which feature built-in device management)  
@@ -90,7 +91,10 @@ In these notes, we manage a hypothetical
 [man-mkfs.xfs]: https://manpages.ubuntu.com/manpages/noble/en/man8/mkfs.xfs.8.html
 [man-chattr]: https://manpages.ubuntu.com/manpages/noble/en/man1/chattr.1.html
 [man-mdadm]: https://manpages.ubuntu.com/manpages/noble/en/man8/mdadm.8.html
-[^names]: see for instance [Archlinux wiki](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-id_and_by-path).
+
+
+<!-- LINKS -->
+[names]: names.md
 
 <!--
 [man-]: 

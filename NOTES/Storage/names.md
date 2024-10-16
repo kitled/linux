@@ -2,11 +2,10 @@
 
 > [!Tip]
 > TL;DR:
-> - `/dev/disk/by-id` for disks
-> - `/dev/disk/by-partlabel` for partitions
-> - 
-> 
-> 
+> - [`/dev/disk/by-id`](#by-id-serialwwn) for disks (serial is useful for maintenance)
+> - [`/dev/disk/by-partlabel`](#by-partlabel) for partitions (easy & reliable)
+
+
 
 
 
@@ -17,7 +16,12 @@ https://wiki.archlinux.org/title/Persistent_block_device_naming
 There are four different schemes used for persistent naming by [`udev`](https://wiki.archlinux.org/title/Udev) (through 60-persistent-storage.rules): [`by-label`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-label), [`by-uuid`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-uuid), [`by-id and by-path`](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-id_and_by-path). For those using disks with GUID Partition Table (GPT), two additional schemes can be used by-partlabel and by-partuuid.
 
 
-### `by-id`: hardware serial & WWN
+
+
+### `by-id` (serial|WWN)
+
+> [!Tip]
+> Recommend for disks.
 
 https://wiki.archlinux.org/title/Persistent_block_device_naming#by-id_and_by-path
 
@@ -37,6 +41,38 @@ ls -l /dev/disk/by-id/
 
 
 
+### `by-partlabel`
+
+> [!Tip]
+> Recommend for partitions.
+
+https://wiki.archlinux.org/title/Persistent_block_device_naming#by-partlabel
+
+GPT partition labels can be defined in the header of the [partition entry](https://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_entries_.28LBA_2.E2.80.9333.29) on GPT disks.
+
+This method is very similar to the [filesystem labels](https://wiki.archlinux.org/title/Persistent_block_device_naming#by-label), except the partition labels do not get affected if the file system on the partition is changed.
+
+All partitions that have partition labels are listed in the `/dev/disk/by-partlabel` directory.
+
+```sh
+ls -l /dev/disk/by-partlabel/
+```
+
+The partition label of a device can be obtained with `lsblk`:
+
+```sh
+lsblk -dno PARTLABEL /dev/sda1
+```
+
+Or with `blkid`:
+
+```
+sudo blkid -s PARTLABEL -o value /dev/sda1
+```
+
+
+
+
 ### `by-uuid`
 
 https://wiki.archlinux.org/title/Persistent_block_device_naming#by-uuid
@@ -47,13 +83,13 @@ https://wiki.archlinux.org/title/Persistent_block_device_naming#by-uuid
 ls -l /dev/disk/by-uuid/
 ```
 
-The UUID of a device can be obtained with lsblk:
+The UUID of a device can be obtained with `lsblk`:
 
 ```sh
 lsblk -dno UUID /dev/sda1
 ```
 
-Or with blkid:
+Or with `blkid`:
 
 ```sh
 sudo blkid -s UUID -o value /dev/sda1
@@ -62,8 +98,6 @@ sudo blkid -s UUID -o value /dev/sda1
 The advantage of using the UUID method is that it is much less likely that name collisions occur than with labels. Further, it is generated automatically on creation of the filesystem. It will, for example, stay unique even if the device is plugged into another system (which may perhaps have a device with the same label).
 
 The disadvantage is that UUIDs make long code lines hard to read and break formatting in many configuration files (e.g. [`fstab`](https://wiki.archlinux.org/title/Fstab) or [`crypttab`](https://wiki.archlinux.org/title/Crypttab)). Also every time a volume is reformatted a new UUID is generated and configuration files have to get manually adjusted.
-
-
 
 
 

@@ -14,7 +14,7 @@
 >     - [`zpool create`](zpool.md#create) a new one,
 >         - [`zfs create`](zfs.md#datasets) a dataset. Done.
 >
-> ⚠️ Setup `zpool scrub` on a timer!
+> ⚠️ Setup [`zpool scrub`](zpool.md#scrub) on a timer!
 
 
 

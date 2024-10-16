@@ -52,7 +52,7 @@ ZFS packages are included in the [contrib repository](https://packages.debian.or
 sudo apt install dpkg-dev linux-headers-generic linux-image-generic
 ```
 
-⮟ `stdout` ⮟
+⮟ [`stdout`][^out1] ⮟
 
 1. Install the ZFS packages.
 

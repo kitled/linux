@@ -4,8 +4,7 @@
 `└──` [**Ubuntu**](ubuntu.md)  
 
 > [!Tip]
-> [⏩](## "Quick Start") [Handbook](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start") | [🅰️](## "Arch wiki") [Arch wiki](https://wiki.archlinux.org/title/ZFS) | 
-
+> Quick Start with the ⏩[`Handbook`](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start").[^handbook]
 
 ## Overview
 
@@ -13,6 +12,11 @@
 > 🧬 [`Repo`][repo] [github.com/**openzfs/zfs**][repo]  
 > 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  
 > 📑 [`Wiki`][wiki] [openzfs.org/**wiki**][wiki]  
+> [⏩](## "Quick Start") [Handbook](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start")  
+> [🅰️](## "Arch wiki") [Arch wiki](https://wiki.archlinux.org/title/ZFS)
+
+
+
 
 ### Features
 
@@ -99,7 +103,7 @@ ZFS on Linux is the official port of OpenZFS to Linux (ZFS was born on Solaris a
 
 
 
-
+[^handbook]: Written for FreeBSD, but ZFS commands (`zpool`, `zfs`) are the same.
 
 <!-- LINKS -->
 [home]: https://openzfs.org/

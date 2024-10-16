@@ -6,6 +6,9 @@ The `zpool` utility controls the operation of the pool and allows adding, removi
 > To manage datasets and volumes, use [`zfs`](zfs.md).
 
 
+
+
+
 ## Overview
 
 ⏩ `Handbook` https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zpool
@@ -14,9 +17,15 @@ The `zpool` utility controls the operation of the pool and allows adding, removi
 > If you already have pools setup in prior installations, skip to Import.
 
 
+
+
+
 ## `create`
 
 Examples.
+
+
+
 
 ### Using full disks
 
@@ -32,6 +41,9 @@ To create more than one `vdev` with a single command, specify groups of disks se
 sudo zpool create mypool mirror \
 /dev/sda /dev/sdb mirror /dev/sdc /dev/sdd
 ```
+
+
+
 
 ### Using partitions
 
@@ -88,11 +100,18 @@ Routinely [scrub](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-scrub
     errors: No known data errors
     ```
 
+Use a timer utility (`systemd`, `cron`, …) to `scrub` automatically.
+
+
+
 
 
 ## `export` & `import`
 
 ⏩ https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zpool-import
+
+
+
 
 ### `export`
 
@@ -101,6 +120,9 @@ Export pools before moving them to another system.
 ```sh
 sudo zpool export mypool
 ```
+
+
+
 
 ### `import`
 
@@ -144,6 +166,8 @@ Importing a pool automatically mounts the datasets.
     NAME                 USED  AVAIL  REFER  MOUNTPOINT
     mypool               110K  47.0G    31K  /mnt/mypool
     ```
+
+
 
 
 

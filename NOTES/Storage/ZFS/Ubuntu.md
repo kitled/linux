@@ -64,7 +64,7 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
     ```
 
----
+
 
 [^out2]: 🖥️`stdout` for `sudo apt install zfsutils-linux`  
     ⮟  

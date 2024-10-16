@@ -143,4 +143,23 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Need to get 4,788 kB of archives.
     After this operation, 26.9 MB of additional disk space will be used.
     Do you want to continue? [Y/n] 
+    ```  
+      
+    ```
+     ┌─────────────────────────────────────────────────────────────────────────────────────┤ Configuring zfs-dkms ├──────────────────────────────────────────────────────────────────────────────────────┐
+     │                                                                                                                                                                                                   │ 
+     │ Licenses of OpenZFS and Linux are incompatible                                                                                                                                                    │ 
+     │                                                                                                                                                                                                   │ 
+     │ OpenZFS is licensed under the Common Development and Distribution License (CDDL), and the Linux kernel is licensed under the GNU General Public License Version 2 (GPL-2). While both are free    │ 
+     │ open source licenses they are restrictive licenses. The combination of them causes problems because it prevents using pieces of code exclusively available under one license with pieces of code  │ 
+     │ exclusively available under the other in the same binary.                                                                                                                                         │ 
+     │                                                                                                                                                                                                   │ 
+     │ You are going to build OpenZFS using DKMS in such a way that they are not going to be built into one monolithic binary. Please be aware that distributing both of the binaries in the same media  │ 
+     │ (disk images, virtual appliances, etc) may lead to infringing.                                                                                                                                    │ 
+     │                                                                                                                                                                                                   │ 
+     │                                                                                              <Ok>                                                                                                 │ 
+     │                                                                                                                                                                                                   │ 
+     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ 
+
+
     ```

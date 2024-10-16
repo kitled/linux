@@ -14,6 +14,23 @@ If an app isn't listed here, it's probably in some ad hoc note — search this r
 ## List
 
 
+
+
+
+
+### mpv
+
+https://mpv.io/  
+
+https://github.com/mpv-player  
+
+https://github.com/mpv-player/mpv
+
+https://github.com/mpv-player/mpv-build  
+
+
+
+
 ### Qalculate! (Qt UI)
 
 🏛️ https://qalculate.github.io/

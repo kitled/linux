@@ -37,7 +37,7 @@ Generally by alpha order, unless reasons.
 `├──` [**Storage**](Storage)  
 `│   ├──` [Btrfs](Storage/Btrfs.md)  
 `│   ├──` [XFS](Storage/XFS.md)  
-`│   └──` [ZFS](Storage/ZFS.md)  
+`│   └──` [ZFS](Storage/ZFS)  
 `├──` [**Systemd**](Systemd)  
 `│   ├──` [Services](Systemd/Services.md)  
 `│   └──` [Timers](Systemd/Timers.md)  

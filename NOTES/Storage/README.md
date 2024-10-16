@@ -16,7 +16,7 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 `├──` [**`mdadm`**](mdadm.md)  
 `├──` [**Btrfs**](Btrfs.md)  
 `├──` [**XFS**](XFS.md)  
-`└──` [**ZFS**](ZFS.md)  
+`└──` [**ZFS**](ZFS)  
 
 
 

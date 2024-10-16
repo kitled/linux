@@ -68,7 +68,9 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Need to get 2,356 kB of archives.
     After this operation, 7,393 kB of additional disk space will be used.
     Do you want to continue? [Y/n] 
-    
+    ```  
+    ⮟  
+    ```
     Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnvpair3linux amd64 2.2.2-0ubuntu9.1 [61.6 kB]
     Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuutil3linux amd64 2.2.2-0ubuntu9.1 [52.7 kB]
     Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libzfs4linux amd64 2.2.2-0ubuntu9.1 [226 kB]

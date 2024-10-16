@@ -147,6 +147,7 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     After this operation, 26.9 MB of additional disk space will be used.
     Do you want to continue? [Y/n] 
     ```  
+      
     ```
 Get:1 http://deb.debian.org/debian bookworm/main amd64 dkms all 3.0.10-8+deb12u1 [48.7 kB]
 Get:2 http://deb.debian.org/debian bookworm-backports/contrib amd64 zfs-dkms all 2.2.6-1~bpo12+3 [2,416 kB]
@@ -229,6 +230,7 @@ Setting up zfs-zed (2.2.6-1~bpo12+3) ...
 Created symlink /etc/systemd/system/zed.service → /lib/systemd/system/zfs-zed.service.
 Created symlink /etc/systemd/system/zfs.target.wants/zfs-zed.service → /lib/systemd/system/zfs-zed.service.
     ```  
+      
     ```
      ┌─────────────────────────────────────────────────────────────────────────────────────┤ Configuring zfs-dkms ├──────────────────────────────────────────────────────────────────────────────────────┐
      │                                                                                                                                                                                                   │ 

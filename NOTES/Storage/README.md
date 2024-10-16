@@ -28,12 +28,14 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 > **TL;DR**
 > - Always use **persistent device [names][names]**, like hardware serial (in `/dev/disk/by-id`) or `by-partlabel`.
 > 
-> - if in doubt:
->     - OS: use [Btrfs](Btrfs.md) in single or mirror (RAID 1)
->     - all else: [ZFS](ZFS)
+> - If in doubt:
+>     - **OS**: use [Btrfs](Btrfs.md) in single or mirror (RAID 1)
+>     - **All else**: [ZFS](ZFS)
 > 
-> - if using [XFS](XFS.md) (or Ext4) with multiple drives, create the [`mdadm`](mdadm.md) array first.  
-Then [format](#choosing-a-filesystem), and finally [mount](mount.md) the partition.
+> - If using [XFS](XFS.md) (or Ext4) with multiple drives:
+>     - Create the [`mdadm`](mdadm.md) array first
+>     - Then [format](#choosing-a-filesystem)
+>     - Finally [mount](mount.md) the partition
 
 Generally:
 
@@ -61,8 +63,8 @@ Generally:
 >
 > My recommendations on Linux are:
 > - [Btrfs](Btrfs.md) for OS drives (single drive, or mirrors/RAID1)
-> - [XFS](XFS.md) for stripes (RAID 0) without COW
-> - [ZFS](ZFS.md) for everything else (non-OS: singles, COW stripes, raidz1~3, and mirror)
+> - [ZFS](ZFS.md) for everything else
+>     - [Root on ZFS](ZFS/README.md#root-on-zfs) for the brave!
  
 [**ZFS**](ZFS.md) is technically the best filesystem ever created in my opinion, but it's quite involved to setup well manually, and benefits a lot from several fast drives and as much RAM as you can give it.
 

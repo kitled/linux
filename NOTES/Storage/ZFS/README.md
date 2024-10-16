@@ -76,11 +76,7 @@ ZFS administration uses two main utilities.
 
 🔗 Installation: `Docs`☛ Getting Started / [Debian][deb]
 
-🔗 Root on ZFS: `Docs`☛ Getting Started / Debian / [Debian Bookworm Root on ZFS][deb12-zfs-root]
-
 [deb]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/
-[deb12-zfs-root]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookworm%20Root%20on%20ZFS.html
-
 
 
 ### Ubuntu
@@ -91,6 +87,21 @@ ZFS administration uses two main utilities.
 
 
 
+
+
+## Root on ZFS
+
+- Debian 12: `Docs`☛ Getting Started / Debian / [Debian **Bookworm** Root on ZFS][deb12-zfs-root]
+- Ubuntu 22.04: `Docs`☛ Getting Started / Ubuntu / [Ubuntu **22.04** Root on ZFS][ubu22-zfs-root]
+
+
+[deb12-zfs-root]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookworm%20Root%20on%20ZFS.html
+[ubu22-zfs-root]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/Ubuntu%2022.04%20Root%20on%20ZFS.html
+
+
+
+
+
 ## Learn ZFS
 
 Official project recommendations
@@ -98,7 +109,7 @@ Official project recommendations
 - FAQ: https://openzfs.github.io/openzfs-docs/Project%20and%20Community/FAQ.html
 - OpenZFS concepts: https://openzfs.org/wiki/Newcomers
 
-Tom Lawrence's excellent explanations
+Tom Lawrence's excellent explanations (high-level, usually on TrueNAS Scale):
 
 - 
 - 

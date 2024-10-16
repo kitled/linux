@@ -2,13 +2,13 @@
 `•`  
 `├──` [**`zpool`**](zpool.md)  
 `├──` [**`zfs`**](zfs.md)  
-`├──` [**Debian**](Debian.md) install  
-`└──` [**Ubuntu**](Ubuntu.md) install  
-
+`└──` [Install](Install)  
+`    ├──` [**Debian**](Install/Debian.md)  
+`    └──` [**Ubuntu**](Install/Ubuntu.md)  
 > [!Tip]
 > Quick Start:
 >
-> 1. [Install](Debian.md) ZFS.
+> 1. [Install](Install) ZFS.
 > 1. Either:
 >     - [`zpool import`](zpool.md#import) an existing pool. Done.
 >     - [`zpool create`](zpool.md#create) a new one,

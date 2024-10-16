@@ -12,12 +12,12 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 ### Table of contents
 
 `.` **Storage**  
-`├──` [**`mount`**](mount.md)  
-`├──` [**`mdadm`**](mdadm.md)  
 `├──` [**names**](names.md)  
 `├──` [**Btrfs**](Btrfs.md)  
+`├──` [**ZFS**](ZFS)  
 `├──` [**XFS**](XFS.md)  
-`└──` [**ZFS**](ZFS)  
+`├──` [**`mdadm`**](mdadm.md)  
+`└──` [**`mount`**](mount.md)  
 
 
 
@@ -26,13 +26,14 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 
 > [!Tip]
 > **TL;DR**
-> - Always use **persistent device [names][names]**, like hardware serial (in `/dev/disk/by-id`), UUID, WWM, or ``by-partlabel`.
+> - Always use **persistent device [names][names]**, like hardware serial (in `/dev/disk/by-id`) or `by-partlabel`.
 > 
-> - if multiple drives, create the [`mdadm`](mdadm.md) array first.  
-(Except for [ZFS](ZFS) and [Btrfs](Btrfs.md) which feature built-in device management)  
->
->- In all cases, [format](#choosing-a-filesystem), for instance in [XFS](XFS.md), and finally [mount](mount.md) the partition.
->
+> - if in doubt:
+>     - OS: use [Btrfs](Btrfs.md) in single or mirror (RAID 1)
+>     - all else: [ZFS](ZFS)
+> 
+> - if using [XFS](XFS.md) (or Ext4) with multiple drives, create the [`mdadm`](mdadm.md) array first.  
+Then [format](#choosing-a-filesystem), and finally [mount](mount.md) the partition.
 
 Generally:
 

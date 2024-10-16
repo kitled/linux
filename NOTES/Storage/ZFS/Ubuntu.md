@@ -39,7 +39,14 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 
 
-## Footnotes
+
+
+
+
+
+---
+
+**Footnotes**
 
 
 [^out1]: 🖥️`stdout` for `sudo add-apt-repository universe`  

@@ -142,6 +142,8 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Do you want to continue? [Y/n]
     ```
 
+---
+
 [^out2]: 🖥️`stdout` for `sudo apt install zfs-dkms zfsutils-linux`  
     ⮟
 

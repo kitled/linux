@@ -2,9 +2,9 @@
 
 
 > [!Note]
-> 🏛️ Home: https://openzfs.org  
-> 🧬 Repo: https://github.com/openzfs/zfs  
-> 📚 Docs: https://openzfs.github.io/openzfs-docs  
+> 🏛️ Home: [openzfs.org](https://openzfs.org)  
+> 🧬 Repo: [github.com/openzfs/zfs](https://github.com/openzfs/zfs)  
+> 📚 Docs: [openzfs.github.io/openzfs-docs](https://openzfs.github.io/openzfs-docs)  
 
 
 

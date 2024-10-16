@@ -9,6 +9,8 @@ ZFS pool management
 
 ⏩ `Handbook` https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zpool
 
+ZFS administration uses two main utilities. The `zpool` utility controls the operation of the pool and allows adding, removing, replacing, and managing disks. The [`zfs`](zfs.md) utility allows creating, destroying, and managing datasets, both [file systems](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-filesystem) and [volumes](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-volume).
+
 > [!Important]
 > If you already have pools setup in prior installations, skip to Import.
 

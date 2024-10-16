@@ -7,8 +7,9 @@
 
 
 
-## Overview
 
+
+## Overview
 
 OpenZFS is an open-source storage platform. It includes the functionality of both traditional file systems and volume manager. It has many advanced features including:
 
@@ -20,6 +21,7 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 - Hardware-accelerated native encryption
 - Efficient storage with snapshots and copy-on-write clones
 - Efficient local or remote replication — send only changed blocks with ZFS send and receive
+
 
 
 
@@ -35,9 +37,12 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 `Wiki`☛ [Developer Resources][dev]
 
 
+
 #### Debian
 
 🔗 Installation: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/
+
+
 
 #### Ubuntu
 
@@ -79,7 +84,6 @@ ZFS on Linux is the official port of OpenZFS to Linux (ZFS was born on Solaris a
 
 
 
-
 <!-- LINKS -->
 [home]: https://openzfs.org/
 [repo]: https://github.com/openzfs/zfs/
@@ -89,8 +93,5 @@ ZFS on Linux is the official port of OpenZFS to Linux (ZFS was born on Solaris a
 [getting-started]: https://openzfs.github.io/openzfs-docs/Getting%20Started/
 [man]: https://openzfs.github.io/openzfs-docs/man/
 [dev]: https://openzfs.org/wiki/Developer_resources
-
-
-
 
 

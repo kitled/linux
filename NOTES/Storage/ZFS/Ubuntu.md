@@ -15,21 +15,13 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/#installation
 
 On Ubuntu, ZFS is included in the default Linux kernel packages. 
 
-To install the ZFS utilities, first make sure `universe` is enabled.
-
-1. Open `/etc/apt/sources.list`
+1. To install the ZFS utilities, first make sure `universe` is enabled.[^out1]
 
     ```sh
-    sudo nano /etc/apt/sources.list
+    sudo add-apt-repository universe
     ```
 
-1. Write:
-
-    ```
-    deb http://archive.ubuntu.com/ubuntu <CODENAME> main universe
-    ```
-
-1. Then install `zfsutils-linux`[^out1]
+1. Then install `zfsutils-linux`[^out2]
 
     ```sh
     sudo apt update
@@ -49,10 +41,29 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
 
 ## Footnotes
 
-[^out1]: `stdout` for `sudo apt install zfsutils-linux`  
+
+[^out1]: `stdout` for `sudo add-apt-repository universe`  
     ⮟  
 
     ``` 
+    Adding component(s) 'universe' to all repositories.
+    Press [ENTER] to continue or Ctrl-c to cancel.
+    Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+    Hit:2 https://brave-browser-apt-release.s3.brave.com stable InRelease             
+    Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease                    
+    Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease                  
+    Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease
+    Reading package lists... Done
+    N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+    ```
+
+
+
+
+[^out2]: `stdout` for `sudo apt install zfsutils-linux`  
+    ⮟  
+
+    ```
     Reading package lists... Done
     Building dependency tree... Done
     Reading state information... Done
@@ -70,8 +81,10 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     Need to get 2,356 kB of archives.
     After this operation, 7,393 kB of additional disk space will be used.
     Do you want to continue? [Y/n] 
-    ```  
-    ⮟  
+    ```
+
+    ⮟
+
     ```
     Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnvpair3linux amd64 2.2.2-0ubuntu9.1 [61.6 kB]
     Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libuutil3linux amd64 2.2.2-0ubuntu9.1 [52.7 kB]

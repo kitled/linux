@@ -1,10 +1,18 @@
 # ZFS
 `•`  
-`├──` [**Debian**](debian.md)  
-`└──` [**Ubuntu**](ubuntu.md)  
+`├──` [**`zpool`**](zpool.md)  
+`├──` [**`zfs`**](zfs.md)  
+`├──` [**Debian**](debian.md) install  
+`└──` [**Ubuntu**](ubuntu.md) install  
 
 > [!Tip]
-> Quick Start with the ⏩[`Handbook`](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start")
+> Quick Start:
+>
+> 1. Install ZFS.
+> 1. Create a pool (array of drives).
+> 1. Create a dataset with mountpoint.
+>
+> Done.
 
 ## Overview
 
@@ -12,8 +20,9 @@
 > 🧬 [`Repo`][repo] [github.com/**openzfs/zfs**][repo]  
 > 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  
 > 📑 [`Wiki`][wiki] [openzfs.org/**wiki**][wiki]  
-> ⏩ [Handbook](https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start") [^handbook]  
-> 🅰️ [Arch wiki](https://wiki.archlinux.org/title/ZFS)
+>
+> ⏩ [`Handbook`][hand][^handbook]  
+> 🅰️ [`Arch`][arch]  
 
 
 
@@ -110,6 +119,8 @@ ZFS on Linux is the official port of OpenZFS to Linux (ZFS was born on Solaris a
 [repo]: https://github.com/openzfs/zfs/
 [docs]: https://openzfs.github.io/openzfs-docs/
 [wiki]: https://openzfs.org/wiki/
+[hand]: https://docs.freebsd.org/en/books/handbook/zfs/ "Quick Start"
+[arch]: https://wiki.archlinux.org/title/ZFS
 [zol]: https://zfsonlinux.org/
 [getting-started]: https://openzfs.github.io/openzfs-docs/Getting%20Started/
 [man]: https://openzfs.github.io/openzfs-docs/man/

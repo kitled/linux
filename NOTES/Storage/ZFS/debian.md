@@ -54,6 +54,9 @@ ZFS packages are included in the [contrib repository](https://packages.debian.or
     sudo apt install zfs-dkms zfsutils-linux 
     ```
 
+    The build step takes some time.  
+    `Building initial module for 6.1.0-26-amd64`
+
 > [!Caution]
 > If you are in a poorly configured environment (e.g. certain VM or container consoles), when `apt` attempts to pop up a message on first install, it may fail to notice a real console is unavailable, and instead appear to hang indefinitely. To circumvent this, you can prefix the apt install commands with `DEBIAN_FRONTEND=noninteractive`, like this:
 >
@@ -144,7 +147,88 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
     After this operation, 26.9 MB of additional disk space will be used.
     Do you want to continue? [Y/n] 
     ```  
-      
+    ```
+Get:1 http://deb.debian.org/debian bookworm/main amd64 dkms all 3.0.10-8+deb12u1 [48.7 kB]
+Get:2 http://deb.debian.org/debian bookworm-backports/contrib amd64 zfs-dkms all 2.2.6-1~bpo12+3 [2,416 kB]
+Get:3 http://deb.debian.org/debian bookworm-backports/contrib amd64 libnvpair3linux amd64 2.2.6-1~bpo12+3 [61.0 kB]
+Get:4 http://deb.debian.org/debian bookworm-backports/contrib amd64 libuutil3linux amd64 2.2.6-1~bpo12+3 [52.1 kB]
+Get:5 http://deb.debian.org/debian bookworm-backports/contrib amd64 libzfs4linux amd64 2.2.6-1~bpo12+3 [229 kB]
+Get:6 http://deb.debian.org/debian bookworm-backports/contrib amd64 libzpool5linux amd64 2.2.6-1~bpo12+3 [1,339 kB]
+Get:7 http://deb.debian.org/debian bookworm-backports/contrib amd64 zfsutils-linux amd64 2.2.6-1~bpo12+3 [563 kB]
+Get:8 http://deb.debian.org/debian bookworm-backports/contrib amd64 zfs-zed amd64 2.2.6-1~bpo12+3 [80.1 kB]
+Fetched 4,788 kB in 0s (21.0 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package dkms.
+(Reading database ... 60409 files and directories currently installed.)
+Preparing to unpack .../0-dkms_3.0.10-8+deb12u1_all.deb ...
+Unpacking dkms (3.0.10-8+deb12u1) ...
+Selecting previously unselected package zfs-dkms.
+Preparing to unpack .../1-zfs-dkms_2.2.6-1~bpo12+3_all.deb ...
+Unpacking zfs-dkms (2.2.6-1~bpo12+3) ...
+Selecting previously unselected package libnvpair3linux.
+Preparing to unpack .../2-libnvpair3linux_2.2.6-1~bpo12+3_amd64.deb ...
+Unpacking libnvpair3linux (2.2.6-1~bpo12+3) ...
+Selecting previously unselected package libuutil3linux.
+Preparing to unpack .../3-libuutil3linux_2.2.6-1~bpo12+3_amd64.deb ...
+Unpacking libuutil3linux (2.2.6-1~bpo12+3) ...
+Selecting previously unselected package libzfs4linux.
+Preparing to unpack .../4-libzfs4linux_2.2.6-1~bpo12+3_amd64.deb ...
+Unpacking libzfs4linux (2.2.6-1~bpo12+3) ...
+Selecting previously unselected package libzpool5linux.
+Preparing to unpack .../5-libzpool5linux_2.2.6-1~bpo12+3_amd64.deb ...
+Unpacking libzpool5linux (2.2.6-1~bpo12+3) ...
+Selecting previously unselected package zfsutils-linux.
+Preparing to unpack .../6-zfsutils-linux_2.2.6-1~bpo12+3_amd64.deb ...
+Unpacking zfsutils-linux (2.2.6-1~bpo12+3) ...
+Selecting previously unselected package zfs-zed.
+Preparing to unpack .../7-zfs-zed_2.2.6-1~bpo12+3_amd64.deb ...
+Unpacking zfs-zed (2.2.6-1~bpo12+3) ...
+Setting up libnvpair3linux (2.2.6-1~bpo12+3) ...
+Setting up dkms (3.0.10-8+deb12u1) ...
+Setting up zfs-dkms (2.2.6-1~bpo12+3) ...
+Loading new zfs-2.2.6 DKMS files...
+Building for 6.1.0-26-amd64
+Building initial module for 6.1.0-26-amd64
+Done.
+
+zfs.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/6.1.0-26-amd64/updates/dkms/
+
+spl.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/6.1.0-26-amd64/updates/dkms/
+depmod...
+Setting up libuutil3linux (2.2.6-1~bpo12+3) ...
+Setting up libzpool5linux (2.2.6-1~bpo12+3) ...
+Setting up libzfs4linux (2.2.6-1~bpo12+3) ...
+Setting up zfsutils-linux (2.2.6-1~bpo12+3) ...
+insmod /lib/modules/6.1.0-26-amd64/updates/dkms/spl.ko 
+insmod /lib/modules/6.1.0-26-amd64/updates/dkms/zfs.ko 
+Created symlink /etc/systemd/system/zfs-import.target.wants/zfs-import-cache.service → /lib/systemd/system/zfs-import-cache.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-import.target → /lib/systemd/system/zfs-import.target.
+Created symlink /etc/systemd/system/zfs-mount.service.wants/zfs-load-module.service → /lib/systemd/system/zfs-load-module.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-load-module.service → /lib/systemd/system/zfs-load-module.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-mount.service → /lib/systemd/system/zfs-mount.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-share.service → /lib/systemd/system/zfs-share.service.
+Created symlink /etc/systemd/system/zfs-volumes.target.wants/zfs-volume-wait.service → /lib/systemd/system/zfs-volume-wait.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-volumes.target → /lib/systemd/system/zfs-volumes.target.
+Created symlink /etc/systemd/system/multi-user.target.wants/zfs.target → /lib/systemd/system/zfs.target.
+zfs-import-scan.service is a disabled or a static unit, not starting it.
+Processing triggers for initramfs-tools (0.142+deb12u1) ...
+update-initramfs: Generating /boot/initrd.img-6.1.0-26-amd64
+Processing triggers for libc-bin (2.36-9+deb12u8) ...
+Processing triggers for man-db (2.11.2-2) ...
+Setting up zfs-zed (2.2.6-1~bpo12+3) ...
+Created symlink /etc/systemd/system/zed.service → /lib/systemd/system/zfs-zed.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-zed.service → /lib/systemd/system/zfs-zed.service.
+    ```  
     ```
      ┌─────────────────────────────────────────────────────────────────────────────────────┤ Configuring zfs-dkms ├──────────────────────────────────────────────────────────────────────────────────────┐
      │                                                                                                                                                                                                   │ 
@@ -160,6 +244,4 @@ https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/Debian%20Bookwor
      │                                                                                              <Ok>                                                                                                 │ 
      │                                                                                                                                                                                                   │ 
      └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘ 
-
-
     ```

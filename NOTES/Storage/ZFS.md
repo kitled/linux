@@ -2,10 +2,10 @@
 
 
 > [!Note]  
-> [🏛️ `Home` **openzfs.org**][home]  
-> [🧬 `Repo` github.com/**openzfs/zfs**][repo]  
-> [📚 `Docs` **openzfs**.github.io/**openzfs-docs**][docs]  
-> [📑 `Wiki` openzfs.org/**wiki**][wiki]
+> 🏛️ [`Home`][home] [**openzfs.org**][home]  
+> 🧬 [`Repo`][repo] [github.com/**openzfs/zfs**][repo]  
+> 📚 [`Docs`][docs] [**openzfs**.github.io/**openzfs-docs**][docs]  
+> 📑 [`Wiki`][wiki] [openzfs.org/**wiki**][wiki]
 
 
 

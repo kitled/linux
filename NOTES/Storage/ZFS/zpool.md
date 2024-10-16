@@ -41,21 +41,25 @@ To create a ZFS pool:
 sudo zpool create -f -o ashift=12 -m <mount> <pool> [raidz(2|3)|mirror] <ids>
 ```
 
-- `create`: subcommand to create the pool.
-- `-f`: Force creating the pool.  
+- `create`: subcommand to **create** the pool.
+- `-f`: **F**orce creating the pool.  
 This is to overcome the "EFI label error". See [#Does not contain an EFI label](https://wiki.archlinux.org/title/ZFS#Does_not_contain_an_EFI_label).
 - `-o ashift=12`: Because correct detection of 4k disks is not reliable, `-o ashift=12` should always be specified during pool creation.
-- `-m`: The mount point of the pool.  
+- `-m`: The **m**ount point of the pool.  
 If this is not specified, then the pool will be mounted to `/<pool>`.
-- `pool`: This is the name of the pool.
-- `raidz(2|3)|mirror`: This is the type of virtual device that will be created from the list of devices.  
-`raidz` is a single disk of parity (similar to raid5), `raidz2` for 2 disks of parity (similar to raid6) and `raidz3` for 3 disks of parity.  
-Also available is `mirror`, which is similar to raid1 or raid10, but is not constrained to just 2 device.  
-If not specified, each device will be added as a `vdev` which is similar to raid0. After creation, a device can be added to each single drive `vdev` to turn it into a `mirror`, which can be useful for migrating data.
-- `ids`: The ID's of the drives or partitions that to include into the pool.
+- `pool`: This is the name of the **pool**.
+- `raidz(2|3)|mirror`: This is the type of virtual device (`vdev`) that will be created from the list of devices.  
+    - Raidz (ZFS RAID) modes:  
+    `raidz` is a single disk of parity (similar to RAID5);  
+    `raidz2` for 2 disks of parity (RAID6);  
+    `raidz3` for 3 disks of parity.  
+    - `mirror` (RAID1 or RAID10) accepts a list of 2 to $n$ devices.  
+    - RAID0 is achieved by not specifying the `vdev` type (each device will be added as one).  
+    After creation, a device can be added to each single drive `vdev` to turn it into a `mirror`, which can be useful for migrating data.
+- `ids`: The list of devices (drives or partitions).
 
 > [!Tip]
-> `export` your specific `<ids>` to environment variables to simplify these commands.
+> `export` your specific `<ids>` to environment variables to shorten `zpool` commands.
 > 
 > ```sh
 > export DISK1="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S"
@@ -64,16 +68,19 @@ If not specified, each device will be added as a `vdev` which is similar to raid
 > export DISK4="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811671K"
 > ```
 
-For example, simple stripe:
+For example, this stripe:
 
 ```sh
-sudo zpool create -f -o ashift=12 -m /mnt/data bigdata \
+sudo zpool create -f -m /mnt/data bigdata \
   /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S \
-  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F \
-  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811584D \
-  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811671K
+  /dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F
 ```
 
+…becomes:
+
+```sh
+sudo zpool create -f -m /mnt/data bigdata $DISK1 $DISK2
+```
 
 Create pool with single raidz vdev:
 
@@ -82,8 +89,7 @@ sudo zpool create -f -m /mnt/data bigdata \
                   raidz \
                      $DISK1 \
                      $DISK2 \
-                     $DISK3 \
-                     $DISK4
+                     $DISK3
 ```
 
 Create pool with two mirror vdevs:
@@ -98,7 +104,7 @@ sudo zpool create -f -m /mnt/data bigdata \
                      $DISK4
 ```
 
-
+Note that the 3 configurations above yield the same usable space (here, 2 TB).
 
 
 ### Using partitions

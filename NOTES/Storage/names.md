@@ -18,17 +18,22 @@ For those using disks with GUID Partition Table (GPT), two additional schemes ca
 > 
 > ```sh
 > # Disks
-> export DISK1="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S"
-> export DISK2="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F"
-> export DISK3="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811584D"
-> export DISK4="/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811671K"
-> …
->
-> # Partitions
-> export PART1="/dev/disk/by-partlabel/…"
-> export PART2="/dev/disk/by-partlabel/…"
-> …
+> DISK_1='/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S'
+> DISK_2='/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F'
+> DISK_3='/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811584D'
+> 
+> export DISK_1 DISK_2 DISK_3
+> 
+> ZFS_DISKS=(
+> $DISK_1
+> $DISK_2
+> $DISK_3
+> )
+> 
+> export ZFS_DISKS
 > ```
+>
+> For instance, place those in `$ZSH_CUSTOM/env.zsh` then run `omz reload` (with Zsh + Oh-My-Zsh).
 
 
 

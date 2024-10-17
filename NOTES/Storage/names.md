@@ -17,7 +17,8 @@ For those using disks with GUID Partition Table (GPT), two additional schemes ca
 > Once you have identified your disks/partitions, `export` your specific `<ids>` to environment variables to simplify shell commands (`zpool`, `mdadm`, …) referencing those block devices.
 > 
 > ```sh
-> # Disks
+> # Disks             Human-friendly physical reference
+> #                   ☛  Type Vendor  Model      Size   Serial number
 > DISK_1='/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811407S'
 > DISK_2='/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811580F'
 > DISK_3='/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_1TB_P2GKFC8E811584D'

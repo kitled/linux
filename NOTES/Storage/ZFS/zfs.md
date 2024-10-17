@@ -55,11 +55,6 @@ In modern versions of ZFS, `zfs destroy` is asynchronous, and the free space mig
 
 
 
-
-
-
-
-
 ### Volumes (zvol)
 
 ⏩ https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zfs-volume
@@ -71,6 +66,34 @@ A volume is a special dataset type. Rather than mounting as a file system, expos
 
 
 
+## `send` & `receive`
 
+### Over SSH
 
+Use the ZFS Delegation system to allow a non-root user on each system to perform the respective send and receive operations. 
 
+On the sending system:
+
+```sh
+sudo zfs allow -u someuser send,snapshot mypool
+```
+
+On the receiving system:
+
+```
+# sysctl vfs.usermount=1
+vfs.usermount: 0 -> 1
+# echo vfs.usermount=1 >> /etc/sysctl.conf
+# zfs create recvpool/backup
+# zfs allow -u someuser create,mount,receive recvpool/backup
+# chown someuser /recvpool/backup
+```
+
+The unprivileged user can receive and mount datasets now, and replicates the home dataset to the remote system:
+
+```
+% zfs snapshot -r mypool/home@monday
+% zfs send -R mypool/home@monday | ssh someuser@backuphost zfs recv -dvu recvpool/backup
+```
+
+Create a recursive snapshot called monday of the file system dataset home on the pool mypool. Then zfs send -R includes the dataset, all child datasets, snapshots, clones, and settings in the stream. Pipe the output through SSH to the waiting zfs receive on the remote host backuphost. Using an IP address or fully qualified domain name is good practice. The receiving machine writes the data to the backup dataset on the recvpool pool. Adding -d to zfs recv overwrites the name of the pool on the receiving side with the name of the snapshot. -u causes the file systems to not mount on the receiving side. Using -v shows more details about the transfer, including the elapsed time and the amount of data transferred.

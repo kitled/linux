@@ -42,7 +42,8 @@ sudo apt install nfs-kernel-server
 
 > [!Tip]
 > If sharing from ZFS, you're done.  
-> No need to edit `/etc/exports`.
+> No need to edit `/etc/exports`.  
+> You may want to setup [`ssh`](../SSH/config.md) to `send|recv`.
 
 
 

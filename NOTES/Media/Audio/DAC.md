@@ -6,29 +6,39 @@ You need *something* to perform the DAC job. It's not rocket science, a good chi
 
 
 
-## Topping D10
+## Topping D10s / Balanced
 
 This is what I currently use. It's a great piece of gear in my experience. Rock solid on Linux.
 
-This is an AI summary, pretty accurate.
+This is an AI summary, pretty accurate. The balanced version features balanced outs (useful if you need long cabling in the analog range, above 10m/30ft in a noisy EM environment).
 
->The Topping D10 Balanced is a budget-friendly, high-performance USB DAC (Digital-to-Analog Converter) designed for audiophiles. Here’s a summary of its key features:
+> The Topping D10s is a budget-friendly USB digital-to-analog converter (DAC) that utilizes the ES9038Q2M chip, a high-performance DAC chip known for its excellent sound quality and low noise floor. Here are some key features and specifications:
+> 
+> - Chipset: **ES9038Q2M**
+> - Decoding: **PCM384kHz/32bit**, **DSD256** (**Native**)
+> - Output: **Line out**, Optical, Coaxial
+> - Display: Shows **format** and **sampling rate**
+> - Compatibility: **Linux**, Windows, Mac (XMOS XU208 USB input controller).
 >
->- ES9038Q2M Chip DAC: Equipped with the premium ESS Technology ES9038Q2M DAC chip, supporting up to 32-bit/384kHz PCM and DSD256 native playback.
->- Balanced Output: Provides a balanced output, ideal for driving high-impedance headphones or active speakers.
->- USB Connectivity: Compatible with Windows (above Win10), Mac, and Linux, with a USB input controller using the XMOS XU208 chip.
->- High Dynamic Range: Offers a 125dB dynamic range at 1kHz, ensuring accurate and detailed sound reproduction.
->- Professional ASIO Support: Compatible with professional ASIO applications, with a customized driver available from Thesycon.
+> **Comparison to Other DACs**
 >
->The Topping D10 Balanced has received positive reviews from audiophiles and critics alike. Many users have praised its:
+> The D10s is an upgrade to the original D10 DAC, featuring improved specifications and a more advanced chipset. Compared to other DACs in its class, the D10s offers:
+> 
+> - Higher dynamic range (125dB at 1kHz) and signal-to-noise ratio
+> - Better decoding capabilities, including DSD256 and PCM384kHz
+> - A more comprehensive output selection, including line out, optical, and coaxial
 >
->- Neutral and spatial sound signature
->- High-quality build and compact design
->- Ease of use and plug-and-play functionality
->- Competitive pricing, available for under $150
+> **Reviews and Feedback**
+> The Topping D10s has received positive reviews from audio enthusiasts and critics alike. Some notable points include:
+> 
+> - Excellent sound quality with detailed and accurate reproduction
+> - Low noise floor and minimal distortion
+> - Easy to use and set up, with a user-friendly interface
+> - Compatible with a wide range of audio software and operating systems
+> - High-quality build and compact design
+> - Competitive pricing, available for under $150
 >
->One user noted that it outperforms more expensive balanced DACs, citing its ability to produce an “incredibly spatial and neutral sound” with impressive instrument separation. Another reviewer praised its value, stating that it’s “as good as the Schiit $800 DAC” they previously owned.
+> **Conclusion**
 >
->The Topping D10 Balanced USB DAC is an excellent choice for those seeking a high-performance, budget-friendly DAC with balanced output. Its ES9038Q2M chip DAC, professional ASIO support, and wide compatibility make it an attractive option for audiophiles and music enthusiasts.
-
+> The Topping D10s is a high-performance DAC that offers excellent sound quality, advanced decoding capabilities, and a user-friendly interface. Its compatibility with a wide range of audio software and operating systems makes it a versatile choice for audiophiles and music enthusiasts.
 

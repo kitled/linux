@@ -16,7 +16,7 @@ Assuming you have a Debian or Ubuntu box up and running, you only need a few ste
 1. Install ALSA tools
 
     ```sh
-    sudo apt-get install alsa-utils alsa-tools 
+    sudo apt install alsa-utils alsa-tools 
     ```
 
 1. Open `/etc/security/limits.conf`
@@ -39,7 +39,7 @@ Assuming you have a Debian or Ubuntu box up and running, you only need a few ste
 1. Install `mpd`
 
     ```sh
-    sudo apt-get install mpd
+    sudo apt install mpd
     ```
 
 1. Assign `mpd` to the group `audio`

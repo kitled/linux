@@ -22,7 +22,7 @@ Assuming you have a Debian or Ubuntu box up and running, you only need a few ste
 1. Open `/etc/security/limits.conf`
 
     ```sh
-    sudo nano /etc/s
+    sudo nano /etc/security/limits.conf
     ```
 
 1. Add the following lines

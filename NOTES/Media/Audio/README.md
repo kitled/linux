@@ -58,6 +58,6 @@ Stack: ???
 In contrast to static local "hifi" playback, streaming has opposite requirements.  
 - Noisy environments and crappy speakers turn dynamic range into an enemy more than your best friend as in the living room.  
 You want 'loudness' compression (just not a brick either), and perhaps a slight EQ push in the mid range (or roll-off of both highs and lows) to improve clarity.
-- Storage, bandwidth, compute, and power are in limited quantity.
+- All resources (bandwidth, compute, data & energy storage) should be spared as much as possible.
 - There's a lot of reencoding needed to stream a rich library (with varied & high resolution formats). Different strategies will suit different needs (from just-in-time to fully pre-reencoded, passing by prediction and caches).
 

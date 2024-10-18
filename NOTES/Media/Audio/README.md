@@ -2,7 +2,7 @@
 
 Audio on Linux used to be a pain, and now it's just delightful.
 
-The stack is built on ALSA ().
+The stack is built on [ALSA](https://www.alsa-project.org/wiki/ (Advanced Linux Sound Architecture).
 
 ## Music Player Daemon (MPD)
 

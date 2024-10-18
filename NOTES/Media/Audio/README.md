@@ -12,34 +12,53 @@ https://www.musicpd.org/
 
 Great post to setup `mpd`: https://www.24bit96.com/hifi-music-server/bitperfect-linux-with-mpd.html
 
-Assuming you have a Debian or Ubuntu box up and running, it's simpler though.
+Assuming you have a Debian or Ubuntu box up and running, you only need a few steps.
 
-ALSA (Advanced Linux Sound Architecture) is a free sound architecture for Linux systems and controls the USB DACs. You install ALSA with the following command
+1. Install ALSA tools.
 
-```sh
-sudo apt-get install alsa-utils alsa-tools 
+    ```sh
+    sudo apt-get install alsa-utils alsa-tools 
+    ```
 
-Edit the file "/etc/security/limits.conf" and add the following lines:
+1. Open the file `/etc/security/limits.conf` .
 
-@audio - rtprio 99
-@audio - memlock unlimited
-@audio - nice -10
+    ```sh
+    sudo nano /etc/s
+    ```
 
+1. Add the following lines.
 
-5) Installing MPD
+    ```
+    @audio - rtprio 99
+    @audio - memlock unlimited
+    @audio - nice -10
+    ```
 
-MPD (Music Player Daemon) is the actual music server and is installed as follows:
-sudo apt-get install mpd
+1. Install `mpd`.
 
-Now assign "mpd" to the group "audio":
-sudo adduser mpd audio
+    ```sh
+    sudo apt-get install mpd
+    ```
 
-Make the directory for your music- and playlist-files
-sudo mkdir /home/usbaudio/share /home/usbaudio/share/music /home/usbaudio/share/playlist
+1. Assign `mpd` to the group `audio` .
 
-The write permission should be set as follows:
-sudo chmod 777 /home/usbaudio/share /home/usbaudio/share/music /home/usbaudio/share/playlist
+    ```sh
+    sudo adduser mpd audio
+    ```
 
+1. Make the directory for your music and playlist files.
+
+    ```
+    sudo mkdir -p /home/usbaudio/share/{music,playlist}
+    ```
+
+1. Set write permissions for all. 
+
+>*like, really? no other way?..*
+
+    ```
+    sudo chmod -R 777 /home/usbaudio/share
+    ```
 
 
 ### Clients

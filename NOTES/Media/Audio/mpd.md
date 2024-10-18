@@ -33,8 +33,8 @@ Assuming you have a Debian or Ubuntu box up and running, you only need a few ste
     @audio - nice -10
     ```
 
-    - Save: <kbd>Ctrl</kbd>+<kbd>o</kbd> then <kbd>Enter</kbd>
-    - Close the editor: <kbd>Ctrl</kbd>+<kbd>x</kbd>
+    Save: <kbd>Ctrl</kbd>+<kbd>o</kbd> then <kbd>Enter</kbd>  
+    Close the editor: <kbd>Ctrl</kbd>+<kbd>x</kbd>  
 
 1. Install `mpd`
 

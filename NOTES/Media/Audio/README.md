@@ -2,7 +2,7 @@
 
 Audio on Linux used to be a pain, and now it's just delightful.
 
-The stack is built on [ALSA](https://www.alsa-project.org/wiki/) (Advanced Linux Sound Architecture), running [MPD](https://www.musicpd.org/) (Music Player Daemon) to an external [DAC](DAC.md) for bit-perfect playback (both PCM and DSD, up to 32bit/384kHz and 512bit).
+The stack is built on [ALSA](https://www.alsa-project.org/wiki/) (Advanced Linux Sound Architecture), running [MPD](https://www.musicpd.org/) (Music Player Daemon) to an external [DAC](DAC.md) for bit-perfect playback (PCM and DSD).
 
 ## Music Player Daemon (MPD)
 

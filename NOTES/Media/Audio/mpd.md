@@ -56,7 +56,7 @@ Assuming you have a Debian or Ubuntu box up and running, you only need a few ste
 
 1. Set write permissions for all
 
->*like, really? no other way?..*
+    >*like, really? no other way?..*
 
     ```
     sudo chmod -R 777 /home/usbaudio/share

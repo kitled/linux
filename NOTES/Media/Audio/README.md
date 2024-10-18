@@ -14,7 +14,7 @@ Two scenarios:
 Stack: "**MAD**" (MPD + ALSA + DAC)
 
 1. [**MPD**](mpd.md) (Music Player Daemon) 
-1. output to **ALSA** (Advanced Linux Sound Architecture) 
+1. output to [**ALSA**](https://www.alsa-project.org/wiki/) (Advanced Linux Sound Architecture) 
 1. feeding the USB [**DAC**](DAC.md) in bit-perfect playback (PCM and DSD)
 
 Clients (web, PC, mobile…) are used for control.

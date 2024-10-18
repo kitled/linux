@@ -9,18 +9,30 @@ Two scenarios:
 
 
 
+
+
+
+
 ## Local playback
 
 Stack: "**MAD**" (MPD + ALSA + DAC)
 
-1. [**MPD**](mpd.md) (Music Player Daemon) 
-1. output to [**ALSA**](https://www.alsa-project.org/wiki/) (Advanced Linux Sound Architecture) 
-1. feeding the USB [**DAC**](DAC.md) in bit-perfect playback (PCM and DSD)
+1. [**MPD**](mpd.md) (Music Player Daemon) handles library files, metadata and playback
+1. ➥ to [**ALSA**](https://www.alsa-project.org/wiki/) (Advanced Linux Sound Architecture) 
+1. ➥ to USB [**DAC**](DAC.md) (Digital to Analog Converter)
 
 Clients (web, PC, mobile…) are used for control.
 
 
 
+
+### Overview
+
+Local playback is static: a fixed machine hooked up to audio equipment. There is not a single wireless part in the audio chain itself, whose bits go straight from the file to the chip that converts them to analog signals and finally amplified to speakers. 
+
+Such setups should yield "bit-perfect" audio for the best theoretical quality, and strive to take the shortest, most transparent path from file to ear.
+
+In this scenario, we maximize quality—notably dynamic range and latency—at the expense of other considerations—such as bitrate (ultimately storage space) or power used.
 
 
 ### Music Player Daemon (MPD)
@@ -33,6 +45,20 @@ See [note](mpd.md) for install & config.
 
 
 
+
+
 ## Streaming
+
+Stack: ???
+
+1. ?
+
+### Overview
+
+In contrast to static local "hifi" playback, streaming has pretty much the opposite requirements.  
+- Noisy environments and crappy speakers turn dynamic range into an enemy more than your best friend as in the living room.  
+- Storage, bandwidth, compute, and power are in limited quantity.  
+- There's a lot of reencoding needed for a rich library (with high resolution formats). Different strategies will suit different needs (from just-in-time to fully pre-reencoded, passing by prediction and caches).
+
 
 

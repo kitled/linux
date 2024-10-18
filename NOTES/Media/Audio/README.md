@@ -12,6 +12,35 @@ https://www.musicpd.org/
 
 Great post to setup `mpd`: https://www.24bit96.com/hifi-music-server/bitperfect-linux-with-mpd.html
 
+Assuming you have a Debian or Ubuntu box up and running, it's simpler though.
+
+ALSA (Advanced Linux Sound Architecture) is a free sound architecture for Linux systems and controls the USB DACs. You install ALSA with the following command
+
+```sh
+sudo apt-get install alsa-utils alsa-tools 
+
+Edit the file "/etc/security/limits.conf" and add the following lines:
+
+@audio - rtprio 99
+@audio - memlock unlimited
+@audio - nice -10
+
+
+5) Installing MPD
+
+MPD (Music Player Daemon) is the actual music server and is installed as follows:
+sudo apt-get install mpd
+
+Now assign "mpd" to the group "audio":
+sudo adduser mpd audio
+
+Make the directory for your music- and playlist-files
+sudo mkdir /home/usbaudio/share /home/usbaudio/share/music /home/usbaudio/share/playlist
+
+The write permission should be set as follows:
+sudo chmod 777 /home/usbaudio/share /home/usbaudio/share/music /home/usbaudio/share/playlist
+
+
 
 ### Clients
 

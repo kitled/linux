@@ -209,13 +209,15 @@ Importing a pool automatically mounts the datasets.
               ada2p3    ONLINE
     ```
 
-1. Import the pool, optionally with an `altroot` (alternative root) directory.
+1. Import the pool.  
+Take care to use `-d /dev/disk/by-<whatever>` otherwise the pool might not auto-import on boot.
+
 
     ```sh
-    sudo zpool import -o altroot=/mnt mypool
+    sudo zpool import -d /dev/disk/by-id mypool
     ```
 
-1. Check that it's properly mounted.
+1. Check that it's properly mounted. Otherwise run `sudo zfs mount -a` .
 
     ```sh
     sudo zfs list

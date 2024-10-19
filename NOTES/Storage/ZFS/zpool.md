@@ -210,7 +210,7 @@ Importing a pool automatically mounts the datasets.
     ```
 
 1. Import the pool.  
-Take care to use `-d /dev/disk/by-<whatever>` otherwise the pool might not auto-import on boot.
+Take care to use `-d /dev/disk/by-<whatever>` otherwise the pool might not auto-import on boot.[^import-d]
 
 
     ```sh
@@ -311,3 +311,4 @@ Upgrade a v28 pool to support `Feature Flags`:
 
 
 
+[^import-d]: https://wiki.archlinux.org/title/ZFS#Importing_a_pool_created_by_id

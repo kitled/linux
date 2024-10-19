@@ -4,6 +4,12 @@
 
 🅰️ https://wiki.archlinux.org/title/NFS
 
+> [!Note]
+> Use NFS**v4**. You know who you are if this doesn't apply to you.
+
+
+
+
 
 ## Server
 

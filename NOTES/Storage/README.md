@@ -18,11 +18,13 @@ For instance, [NFS](../Net/NFS.md).
 ### Table of contents
 
 <!-- LINKS -->
-[NS]: NS.md#persistent-block-device-naming
+[NS]: NS.md
+[FS]: FS/
 [Btrfs]: FS/Btrfs.md
+[Tools]: Tools/
 
 `.` **Storage**  
-`├──` [**NS**](NS.md) ⮜ NameSpaces  
+`├──` [**NS**][NS] ⮜ NameSpaces  
 `├──` [**FS**](FS)  ⮜ FileSystems  
 `|   ├──` [**Btrfs**][Btrfs]  
 `|   ├──` [**ZFS**](FS/ZFS)  
@@ -31,6 +33,9 @@ For instance, [NFS](../Net/NFS.md).
 `    ├──` [**`mount`**](Tools/mount.md)  
 `    └──` [**`mdadm`**](Tools/mdadm.md)  
 
+<!-- LINKS to subsections -->
+[NS-persistent]: NS.md#persistent-block-device-naming
+
 
 
 
@@ -38,7 +43,8 @@ For instance, [NFS](../Net/NFS.md).
 
 > [!Tip]
 > **TL;DR**
-> - Always use **persistent device [names][NS]**, like hardware serial (in `/dev/disk/by-id`) or `by-partlabel`.
+> - Always use **persistent device [names][NS-persistent]**, like the hardware serial number, or a chosen name.  
+(in `/dev/disk/by-id` or `by-partlabel`).
 > 
 > - If in doubt:
 >     - **OS**: use [**Btrfs**](Btrfs.md) in single or mirror (RAID 1)

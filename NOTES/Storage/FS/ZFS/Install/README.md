@@ -6,7 +6,8 @@
 
 ## Procedure
 
-On Linux, a normal ZFS installation lets you manage any drive *but* the OS drive itself.
+On Linux, a normal ZFS installation lets you manage any drive *but* the OS drive itself.  
+So it's perfectly fine (and my generic recommendation) for any additional storage.
 
 - [**Debian**](Debian.md)
 - [**Ubuntu**](Ubuntu.md)

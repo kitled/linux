@@ -1,13 +1,19 @@
 # Storage
 
+Manage physical drives and virtual storage spaces: format, mount, permissions, maintain…
 
+> [!Note]  
+> For sharing, see [Net](../Net/) (Network) section.  
+For instance, [NFS](../Net/NFS.md).
 
 
 ## Overview
 
-Manage physical drives and virtual storage spaces: format, mount, maintain.
-
-
+> [!Tip]
+> In this section, we manage a hypothetical, generic  
+> - storage unit called `data`  
+> - located at `/data`  
+> - composed of physical devices aliased `$disk1`, `$disk2`, …`$diskN`.
 
 ### Table of contents
 
@@ -24,7 +30,7 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 
 
 
-### What you need to know
+## What you need to know
 
 > [!Tip]
 > **TL;DR**
@@ -71,28 +77,12 @@ Generally:
 > **TL;DR**
 >
 > My recommendations on Linux are:
-> - [Btrfs](Btrfs.md) for OS drives (single drive, or mirrors/RAID1)
+> - [Btrfs](Btrfs.md) for OS drive (single or ideally mirror)
 > - [ZFS](ZFS.md) for everything else
 >     - [Root on ZFS](ZFS/README.md#root-on-zfs) for the brave!
- 
-[**ZFS**](ZFS.md) is technically the best filesystem ever created in my opinion. It benefits a lot from a few fast drives for write/read caching, but above all ***as much RAM as you can give it***. [Learn ZFS](ZFS/README.md#learn-zfs) to understand why.
 
-[**XFS**](XFS.md) (or even Ext4) is fine for most cases.
+See [`FS`](FS) for details and procedures.
 
-For large arrays that benefit from redundancy, use ZFS.
-
-For OS drives, [**Btrfs**](Btrfs.md) shines on Linux (but **NEVER** in raid 5 or 6). It has nice rollback features. A Btrfs mirror is as safe and easy as it gets for Linux OS partitions.
-
-
-
-
-
-## Meta
-
-In these notes, we manage a hypothetical  
-- storage unit called `data`  
-- located at `/mnt/data`  
-- composed of physical drives aliased `$disk1`, `$disk2`, …, `$diskN`
 
 
 

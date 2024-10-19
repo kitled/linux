@@ -1,12 +1,17 @@
-# Names
+# Namespaces
+
+> Naming things is hard.  
+
+
+
+## Referencing
+
+### Persistent block device naming
 
 > [!Tip]
 > TL;DR:
 > - [`/dev/disk/by-id`](#by-id-serialwwn) for disks (serial is useful for maintenance)
 > - [`/dev/disk/by-partlabel`](#by-partlabel) for partitions (easy & reliable)
-
-
-## Persistent block device naming
 
 https://wiki.archlinux.org/title/Persistent_block_device_naming
 
@@ -39,7 +44,7 @@ For those using disks with GUID Partition Table (GPT), two additional schemes ca
 
 
 
-### `by-id` (serial|WWN)
+#### `by-id` (serial|WWN)
 
 > [!Tip]
 > Recommend for disks.
@@ -62,7 +67,7 @@ ls -l /dev/disk/by-id/
 
 
 
-### `by-partlabel`
+#### `by-partlabel`
 
 > [!Tip]
 > Recommend for partitions.
@@ -94,7 +99,7 @@ sudo blkid -s PARTLABEL -o value /dev/sda1
 
 
 
-### `by-uuid`
+#### `by-uuid`
 
 https://wiki.archlinux.org/title/Persistent_block_device_naming#by-uuid
 

@@ -20,28 +20,28 @@ All READMEs = full toc & intros of these notes
 > [!Warning]
 > This list is a WIP / TODO!
 > A lot may be incorrect or missing at any time.
-
-
-`.`  
-`├──` [**Shell**](Shell)  
-`│   ├──` Bash  
-`│   └──` [Zsh](Shell/ZSH)  
-`├──` [**SSH**](SSH)  
-`│   ├──` [`config`](SSH/config.md)  
-`│   ├──` [`ssh-keygen`](SSH/ssh-keygen.md)  
-`│   ├──` [`sshd`](SSH/sshd.md) (OpenSSH Server)   
-`│   └──` [SCP](SSH/SCP.md) (Secure copy protocol)  
-`├──` [**Storage**](Storage)  
-`│   ├──` [Btrfs](Storage/Btrfs.md)  
-`│   ├──` [XFS](Storage/XFS.md)  
-`│   └──` [ZFS](Storage/ZFS)  
-`├──` [**Systemd**](Systemd)  
-`│   ├──` [Services](Systemd/Services.md)  
-`│   └──` [Timers](Systemd/Timers.md)  
-`└──` [**Users**](Users)  
-`    ├──` [Accounts](Users/Accounts.md)  
-`    ├──` [Groups](Users/Groups.md)  
-`    └──` [Rights](Users/Rights.md)  
+> 
+> 
+> `.`  
+> `├──` [**Shell**](Shell)  
+> `│   ├──` Bash  
+> `│   └──` [Zsh](Shell/ZSH)  
+> `├──` [**SSH**](SSH)  
+> `│   ├──` [`config`](SSH/config.md)  
+> `│   ├──` [`ssh-keygen`](SSH/ssh-keygen.md)  
+> `│   ├──` [`sshd`](SSH/sshd.md) (OpenSSH Server)   
+> `│   └──` [SCP](SSH/SCP.md) (Secure copy protocol)  
+> `├──` [**Storage**](Storage)  
+> `│   ├──` [Btrfs](Storage/Btrfs.md)  
+> `│   ├──` [XFS](Storage/XFS.md)  
+> `│   └──` [ZFS](Storage/ZFS)  
+> `├──` [**Systemd**](Systemd)  
+> `│   ├──` [Services](Systemd/Services.md)  
+> `│   └──` [Timers](Systemd/Timers.md)  
+> `└──` [**Users**](Users)  
+> `    ├──` [Accounts](Users/Accounts.md)  
+> `    ├──` [Groups](Users/Groups.md)  
+> `    └──` [Rights](Users/Rights.md)  
 
 <!-- TEMPLATE
 

@@ -22,7 +22,7 @@ Generally by alpha order, unless reasons.
     - All READMEs = full toc & intros of these notes
 
 
-> ⚠️ This is work-in-progress, take this list as a TODO (a lot may be missing at any time).
+> ⚠️ This is work-in-progress, take this list as a WIP / TODO (a lot may be incorrect or missing at any time).
 
 
 `.`  

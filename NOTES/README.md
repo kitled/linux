@@ -58,7 +58,10 @@ All READMEs = full toc & intros of these notes
 `     └──` zxcv  
 
 -->
-Tentative visual summary (not great in my opinion)
+
+## Visual abstract
+
+This doesn't look great in my opinion. Will redo better using something else.
 
 ```mermaid
 graph LR

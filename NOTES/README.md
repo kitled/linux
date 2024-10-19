@@ -1,6 +1,5 @@
 # Linux Notes
 
-
 <!--
 
 > [!Note]
@@ -10,19 +9,17 @@
 > 
 > It's hard to find a one-size-fits-all structure, so it may evolve in time, but discoverability will be handled by tags in the metadata of Markdown files.
 
-
 -->
-
 
 ## Table of contents
 
-Generally by alpha order, unless reasons.
-
-- A directory note is the `./README.md`
-    - All READMEs = full toc & intros of these notes
+A directory note is the `./README.md`  
+All READMEs = full toc & intros of these notes
 
 
-> ⚠️ This is work-in-progress, take this list as a WIP / TODO (a lot may be incorrect or missing at any time).
+> [!Warning]
+> This list is a WIP / TODO!
+> A lot may be incorrect or missing at any time.
 
 
 `.`  
@@ -61,6 +58,7 @@ Generally by alpha order, unless reasons.
 `     └──` zxcv  
 
 -->
+
 
 ```mermaid
 graph LR

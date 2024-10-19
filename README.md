@@ -7,16 +7,9 @@ Notes on all things Linux.
 > Start here: [NOTES](/NOTES/README.md)
 
 
-
-
-
-
 <!--
 
-
 ----
-
-
 
 ## How to use
 

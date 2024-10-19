@@ -62,6 +62,27 @@ Generally by alpha order, unless reasons.
 
 -->
 
+```mermaid
+graph LR
 
+NS[Namespaces]
+FS[Filesystems]
 
+Linux --- Apps & Media & Storage & Network & Shell & System & Test & Users & misc
 
+Media --- Text & Pictures & Audio & Video
+Audio --- mpd & DAC
+
+Storage --- NS & FS & Tools
+FS --- ZFS & Btrfs & XFS
+
+Network --- Share --- NFS
+
+Shell --- Zsh & SSH & multiplex
+
+System --- Systemd
+
+Test --- stress-ng
+
+Users --- Accounts & Groups & Rights
+```

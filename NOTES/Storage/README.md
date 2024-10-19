@@ -12,12 +12,14 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 ### Table of contents
 
 `.` **Storage**  
-`├──` [**names**](names.md)  
-`├──` [**Btrfs**](Btrfs.md)  
-`├──` [**ZFS**](ZFS)  
-`├──` [**XFS**](XFS.md)  
-`├──` [**`mdadm`**](mdadm.md)  
-`└──` [**`mount`**](mount.md)  
+`├──` [**NS**](NS.md) ⮜ NameSpaces  
+`├──` [**FS**](FS)  ⮜ FileSystems  
+`|   ├──` [**Btrfs**](FS/Btrfs.md)  
+`|   ├──` [**ZFS**](FS/ZFS)  
+`|   └──` [**XFS**](FS/XFS.md)  
+`└──` [**Tools**](Tools.md)  
+`    ├──` [**`mount`**](Tools/mount.md)  
+`    └──` [**`mdadm`**](Tools/mdadm.md)  
 
 
 
@@ -29,13 +31,17 @@ Manage physical drives and virtual storage spaces: format, mount, maintain.
 > - Always use **persistent device [names][names]**, like hardware serial (in `/dev/disk/by-id`) or `by-partlabel`.
 > 
 > - If in doubt:
->     - **OS**: use [Btrfs](Btrfs.md) in single or mirror (RAID 1)
->     - **All else**: [ZFS](ZFS)
+>     - **OS**: use [**Btrfs**](Btrfs.md) in single or mirror (RAID 1)
+>     - **All else**: [**ZFS**](ZFS)
 > 
 > - If using [XFS](XFS.md) (or Ext4) with multiple drives:
 >     - Create the [`mdadm`](mdadm.md) array first
 >     - Then [format](XFS.md#example-setup) it.
 >     - Finally [`mount`](mount.md) the partition
+> - Purchase: **prefer more, smaller drives** for a given total (sum) capacity, assuming equivalent cost (if needed, you may use PCIe cards to add more SATA/NVMe ports to a machine).
+>
+> For instance, **4 ×** 1TB is **better** than a **single** 4TB drive.  
+> More drives opens parallelization and redundancy options (RAID) which improve performance and reliability of storage.
 
 Generally:
 

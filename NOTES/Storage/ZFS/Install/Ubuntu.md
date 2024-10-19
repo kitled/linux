@@ -1,8 +1,8 @@
 # Ubuntu
 
-https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/
+🔗 Installation: `Docs`☛ Getting Started / [Ubuntu][ubu]
 
-
+[ubu]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/
 
 
 

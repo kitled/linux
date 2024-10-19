@@ -1,7 +1,9 @@
 # Debian
 
-https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/
 
+🔗 Installation: `Docs`☛ Getting Started / [Debian][deb]
+
+[deb]: https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/
 
 
 

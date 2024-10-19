@@ -17,10 +17,14 @@ For instance, [NFS](../Net/NFS.md).
 
 ### Table of contents
 
+<!-- LINKS -->
+[NS]: NS.md#persistent-block-device-naming
+[Btrfs]: FS/Btrfs.md
+
 `.` **Storage**  
 `├──` [**NS**](NS.md) ⮜ NameSpaces  
 `├──` [**FS**](FS)  ⮜ FileSystems  
-`|   ├──` [**Btrfs**](FS/Btrfs.md)  
+`|   ├──` [**Btrfs**][Btrfs]  
 `|   ├──` [**ZFS**](FS/ZFS)  
 `|   └──` [**XFS**](FS/XFS.md)  
 `└──` [**Tools**](Tools)  
@@ -34,7 +38,7 @@ For instance, [NFS](../Net/NFS.md).
 
 > [!Tip]
 > **TL;DR**
-> - Always use **persistent device [names][names]**, like hardware serial (in `/dev/disk/by-id`) or `by-partlabel`.
+> - Always use **persistent device [names][NS]**, like hardware serial (in `/dev/disk/by-id`) or `by-partlabel`.
 > 
 > - If in doubt:
 >     - **OS**: use [**Btrfs**](Btrfs.md) in single or mirror (RAID 1)
@@ -77,9 +81,9 @@ Generally:
 > **TL;DR**
 >
 > My recommendations on Linux are:
-> - [Btrfs](Btrfs.md) for OS drive (single or ideally mirror)
-> - [ZFS](ZFS.md) for everything else
->     - [Root on ZFS](ZFS/README.md#root-on-zfs) for the brave!
+> - [Btrfs][Btrfs] for OS drive (single or ideally mirror)
+> - [ZFS][ZFS] for everything else
+>     - [Root on ZFS](FS/ZFS/Install/README.md#root-on-zfs) for the brave!
 
 See [`FS`](FS) for details and procedures.
 
@@ -96,7 +100,8 @@ See [`FS`](FS) for details and procedures.
 
 
 <!-- LINKS -->
-[names]: names.md#persistent-block-device-naming
+[names]: NS.md#persistent-block-device-naming
+[Btrfs]: FS/Btrfs.md
 
 <!--
 [man-]: 

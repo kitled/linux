@@ -1,10 +1,18 @@
 # Media
 
-Audiovisual content management.
+Content management.
 
 - Text
 - Pictures
 - [Audio](Audio)
 - Video
 - Games
+
+
+
+
+## Namespaces
+
+
+
 

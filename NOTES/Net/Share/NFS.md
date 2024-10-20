@@ -82,8 +82,49 @@ Then mount omitting the server's NFS export root:
 sudo mount -t nfs -o vers=4 servername:/music /mountpoint/on/client
 ```
 
+### autofs
 
+https://wiki.archlinux.org/title/Autofs#NFS_network_mounts
 
+AutoFS provides automatically discovering and mounting NFS-shares on remote servers (the AutoFS network template in `/etc/autofs/auto.net` has been removed in autofs5). To enable automatic discovery and mounting of network shares from all accessible servers without any further configuration, you will need to add the following to the `/etc/autofs/auto.master` file:
+
+```
+/net -hosts --timeout=60
+```
+
+> [!Note]
+> Each host name needs to be resolveable, e.g. the name and IP address in /etc/hosts or via DNS and make sure you have nfs-utils installed and configured. You also have to enable rpcbind to browse shared directories.
+
+For instance, if you have a remote server *fileserver* (the name of the directory is the hostname of the server) with an NFS share named `/home/share`, you can just access the share by typing:
+
+```sh
+sudo cd /net/fileserver/home/share
+```
+
+> [!Note]
+> Please note that *ghosting* (i.e. automatically creating directory placeholders before mounting shares) is enabled by default; although, AutoFS installation notes claim to remove that option from /etc/conf.d/autofs in order to start the AutoFS daemon.
+
+The `-hosts` option uses a similar mechanism as the `showmount` command to detect remote shares. You can see the exported shares by typing:
+
+```sh
+sudo showmount servername -e
+```
+
+#### Manual NFS configuration
+
+To mount a NFS share for file_server on `/srv/shared_dir` at location `/mnt/foo`, add a new configuration, e.g. `file_server.autofs`.
+
+`/etc/autofs/auto.master.d/file_server.autofs`
+
+```
+/mnt   /etc/autofs/auto.file_server --timeout 60
+```
+
+`/etc/autofs/auto.file_server`
+
+```
+foo  -rw,soft,rsize=8192,wsize=8192 file_server:/srv/shared_dir
+```
 
 ---
 

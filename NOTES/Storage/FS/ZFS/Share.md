@@ -11,7 +11,7 @@ Share ZFS filesystems over the network.
 
 
 
-## NFS
+## NFS Server
 
 ### Naive setup
 
@@ -56,5 +56,4 @@ For instance with `ufw`:
     sudo showmount -e `hostname`
     sudo exportfs -v
     ```
-
 

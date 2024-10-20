@@ -260,6 +260,12 @@ If all went fine, you may now use [clients](#clients) to control MPD.
 
 https://www.musicpd.org/clients/
 
+
+
+#### Local
+
+To check whether things work locally, `mpc` works. It's unmaintained though.
+
 `mpc` is a GUI classic for a quick spin locally. It's GTK though, so ugly on KDE. \>\_\<  
 I'd use that to test the setup, and then go on my merry quest to find the greatest apps.
 

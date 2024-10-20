@@ -68,9 +68,38 @@ A volume is a special dataset type. Rather than mounting as a file system, expos
 
 ## `send` & `receive`
 
+🅰️ https://wiki.archlinux.org/title/ZFS#Transmitting_snapshots_with_ZFS_Send_and_ZFS_Recv
+
+### Locally
+
+🅰️ https://wiki.archlinux.org/title/ZFS#Basic_ZFS_Send
+
+First, create a snapshot of some ZFS filesystem:
+
+```sh
+sudo zfs snapshot zpool0/archive/books@snap
+```
+
+Now send the snapshot to a new location on a different zpool:
+
+```sh
+sudo zfs send -v zpool0/archive/books@snap | zfs recv zpool4/library
+```
+
+The contents of zpool0/archive/books@snap are now live at zpool4/library
+
+> [!Tip]
+> See [man zfs-send][man-zfs-send] and [man zfs-recv][man-zfs-recv] for details on flags.
+
 ### Over SSH
 
+🅰️ https://wiki.archlinux.org/title/ZFS#Send_over_ssh
+
 Use the ZFS Delegation system to allow a non-root user on each system to perform the respective send and receive operations. 
+
+> [!Important]
+> You may want to setup [`ssh`](../SSH/config.md) first.
+
 
 On the sending system:
 
@@ -97,3 +126,13 @@ The unprivileged user can receive and mount datasets now, and replicates the hom
 ```
 
 Create a recursive snapshot called monday of the file system dataset home on the pool mypool. Then zfs send -R includes the dataset, all child datasets, snapshots, clones, and settings in the stream. Pipe the output through SSH to the waiting zfs receive on the remote host backuphost. Using an IP address or fully qualified domain name is good practice. The receiving machine writes the data to the backup dataset on the recvpool pool. Adding -d to zfs recv overwrites the name of the pool on the receiving side with the name of the snapshot. -u causes the file systems to not mount on the receiving side. Using -v shows more details about the transfer, including the elapsed time and the amount of data transferred.
+
+
+
+
+
+
+
+
+[man-zfs-send]: https://openzfs.github.io/openzfs-docs/man/8/zfs-send.8.html
+[man-zfs-recv]: https://openzfs.github.io/openzfs-docs/man/8/zfs-recv.8.html

@@ -48,11 +48,7 @@ sudo apt install nfs-kernel-server
 ```
 
 > [!Tip]
-> If sharing from ZFS, you're done.  
-> No need to edit `/etc/exports`.  
-> You may want to setup [`ssh`](../SSH/config.md) to `send|recv`.
-
-See [`man`][^man] for NSFD 
+> If [sharing from ZFS][zfs-share], you're done here: no need to edit `/etc/exports`.
 
 > [!Note]
 > For Debian, additional configuration information can be found in this old admin page (still recommended in the Debian wiki apparently): https://www.debianadmin.com/network-file-system-nfs-server-and-client-configuration-in-debian.html
@@ -112,4 +108,11 @@ sudo mount -t nfs -o vers=4 servername:/music /mountpoint/on/client
     Do you want to continue? [Y/n] 
     ```
 
+
+
+
 [^man]: https://manpages.debian.org/stretch/nfs-kernel-server/rpc.nfsd.8.en.html
+
+
+
+[zfs-share]: ../../Storage/FS/ZFS/Share.md

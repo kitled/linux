@@ -54,6 +54,8 @@ OpenZFS is an open-source storage platform. It includes the functionality of bot
 
 ### Administration
 
+📘 [`man`][man] [System Administration Commands (8)][man]
+
 ZFS administration uses two main utilities. 
 - The [`zpool`](zpool.md) utility controls the operation of the pool and allows adding, removing, replacing, and managing disks. 
 - The [`zfs`](zfs.md) utility allows creating, destroying, and managing datasets, both [file systems](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-filesystem) and [volumes](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-term-volume).
@@ -140,7 +142,7 @@ Tom Lawrence's excellent explanations (high-level, usually on TrueNAS Scale):
 [arch]: https://wiki.archlinux.org/title/ZFS
 [zol]: https://zfsonlinux.org/
 [getting-started]: https://openzfs.github.io/openzfs-docs/Getting%20Started/
-[man]: https://openzfs.github.io/openzfs-docs/man/
+[man]: https://openzfs.github.io/openzfs-docs/man/master/8/index.html
 [dev]: https://openzfs.org/wiki/Developer_resources
 
 

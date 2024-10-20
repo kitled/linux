@@ -8,7 +8,8 @@ The `zfs` utility can create, destroy, and manage all existing ZFS datasets with
 ## Overview
 
 ⏩ `Handbook` https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zfs
- 
+ `man` 
+
 
 ## `create` & `destroy`
 
@@ -29,7 +30,38 @@ For example, one could assign a quota limit to a specific directory within a dat
 sudo zfs set quota=20G <nameofzpool>/<nameofdataset>/<directory>
 ```
 
-To see all the commands available in ZFS, see `zfs(8)` or `zpool(8)`.
+
+
+
+#### Examples
+
+1. To create a dataset named `ds0` in the pool named `tank`, do:
+
+   ```sh
+   sudo zfs create tank/ds0
+   ```
+
+   You can nest datasets.
+      
+   However, each dataset is managed (snapshot, shared, …) on its own.  
+   Nesting thus complexifies maintenance.
+
+1. Inspect datasets. This helps keeping track of nesting.
+
+   ```sh
+   sudo zfs list
+   ```
+
+1. Inspect properties, either all or some in particular.
+
+   ```sh
+   sudo zfs get all ds0          # see all properties    only for "ds0"
+   sudo zfs get sharenfs         # see only "sharenfs"   for all datasets
+   sudo zfs get mountpoint ds0   # see only "mountpoint" only for "ds0"
+   ```
+
+
+
 
 #### Detail
 

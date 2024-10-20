@@ -99,7 +99,7 @@ See User > [Rights](../../../Users/Rights.md#example-give-access-to-a-second-gro
 > ```sh
 > export         POOL_NAME="big"
 > export       SERVER_NAME="srv"    # in /etc/hosts or DNS
-> export   POOL_MOUNTPOINT="/z"
+> export   POOL_MOUNTPOINT="/$POOL_NAME"
 > export CLIENT_MOUNTPOINT="/net/$POOL_NAME"
 > ```
 
@@ -108,14 +108,14 @@ sudo mount $SERVER_NAME:$POOL_MOUNTPOINT $CLIENT_MOUNTPOINT
 ```
 
 > ```sh
-> sudo mount srv:/z /net/big
+> sudo mount srv:/big /net/big
 > ```
 
 ### Auto-mount
 
 `autofs` will auto-mount either *all* available shares on the network (one-liner in default config), or a specified subset thereof.
 
-See Net > Share > NFS # [autofs](../../../Net/Share/NFS.md#autofs) for a comprehensive explanation.
+See [Net](../../../Net/)/[Share](../../../Net/Share/)/[NFS](../../../Net/Share/NFS.md) #[**autofs**](../../../Net/Share/NFS.md#autofs) for a comprehensive explanation.
 
 
 

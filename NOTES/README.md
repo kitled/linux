@@ -87,3 +87,35 @@ Test --- stress-ng
 
 Users --- Accounts & Groups & Rights
 ```
+
+
+
+## Variables
+
+List of variables used in these notes.  
+
+> [!Tip]
+> The use of variables as placeholders in deliberate: it helps differentiating between actual commands and user-chosen strings.
+>
+> For instance, in the command below, it's clear that you should choose the value of the variables `$POOL_NAME` and `$DATASET_NAME`, whereas `sudo zfs create` is used verbatim.
+> 
+> > ```sh
+> > export POOL_NAME="hyperpool"
+> > export DATASET_NAME="hyperset"
+> > ```
+> ```sh
+> sudo zfs create $POOL_NAME/$DATASET_NAME
+> ```
+>
+> For clarity in procedures as in the above example, variables declarations are indented within a quote block, before the command using them.
+
+
+
+
+
+
+
+
+
+
+

@@ -111,6 +111,11 @@ sudo mount $SERVER_NAME:$POOL_MOUNTPOINT $CLIENT_MOUNTPOINT
 > sudo mount srv:/big /net/big
 > ```
 
+> [!Tip]  
+> Using <kbd>Tab</kbd> for auto-completion lets you validate inputs as-you-go.  
+For instance above, variable names and paths including network mounts.
+
+
 ### Auto-mount
 
 `autofs` will auto-mount either *all* available shares on the network (one-liner in default config), or a specified subset thereof.

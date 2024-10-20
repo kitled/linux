@@ -2,9 +2,10 @@
 `•`  
 `├──` [**`zpool`**](zpool.md)  
 `├──` [**`zfs`**](zfs.md)  
-`└──` [Install](Install)  
-`    ├──` [**Debian**](Install/Debian.md)  
-`    └──` [**Ubuntu**](Install/Ubuntu.md)  
+`├──` [**Share**](Share.md)  
+`└──` [**Install**](Install)  
+`    ├──` [Debian](Install/Debian.md)  
+`    └──` [Ubuntu](Install/Ubuntu.md)  
 > [!Tip]
 > Quick Start:
 >

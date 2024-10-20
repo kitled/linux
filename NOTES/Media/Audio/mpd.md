@@ -78,138 +78,143 @@ Assuming you have a Debian or Ubuntu box up and running, you only need a few ste
 >     - set it to `disable` in systemd
 >     - trigger `start mpd` ourselves in our own systemd unit (with the soundcard matching thing)
 
-Connect the USB DAC, and use the console to check the converter connections:
+1. Make sure the USB DAC is connected. If it wasn't already, shutdown, plug it in, then boot.  
+This totally caveman move helps ensuring you get the 'normal' id below, until we fix this method.
 
-```sh
-sudo aplay --list-devices
-```
+1. List audio devices.
 
-You get a list of devices like this:
+    ```sh
+    sudo aplay --list-devices
+    ```
 
-```
-**** List of PLAYBACK Hardware Devices ****
-card 0: NVidia [HDA NVidia], device 3: HDMI 0 [HDMI 0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-...
-card 1: Generic_1 [HD-Audio Generic], device 3: HDMI 0 [SAMSUNG]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-...
-```
+1. You get a list of devices like this:
 
-You're looking for the one that matches your USB DAC.  
-*In my case for the Topping 10s, it's `card 3`.*
+    ```
+    **** List of PLAYBACK Hardware Devices ****
+    card 0: NVidia [HDA NVidia], device 3: HDMI 0 [HDMI 0]
+      Subdevices: 1/1
+      Subdevice #0: subdevice #0
+    ...
+    card 1: Generic_1 [HD-Audio Generic], device 3: HDMI 0 [SAMSUNG]
+      Subdevices: 1/1
+      Subdevice #0: subdevice #0
+    ...
+    ```
 
-```
-card 3: D10 [D10], device 0: USB Audio [USB Audio]
-  Subdevices: 0/1
-  Subdevice #0: subdevice #0
-```
+    You're looking for the one that matches your USB DAC.  
+    *In my case for the Topping 10s, it's `card 3`.*
 
-Alternatively, you can just look at `/proc/asound/cards` to confirm the card number.  
-*Again, `3` for me.*
+    ```
+    card 3: D10 [D10], device 0: USB Audio [USB Audio]
+      Subdevices: 0/1
+      Subdevice #0: subdevice #0
+    ```
 
-```sh
-sudo cat /proc/asound/cards
-```
+1. Alternatively, you can just look at `/proc/asound/cards` to confirm the card number.  
 
-```
- 0 [NVidia         ]: HDA-Intel - HDA NVidia
-                      HDA NVidia at 0xdf080000 irq 219
- 1 [Generic_1      ]: HDA-Intel - HD-Audio Generic
-                      HD-Audio Generic at 0xdf588000 irq 221
- 2 [Generic        ]: HDA-Intel - HD-Audio Generic
-                      HD-Audio Generic at 0xdf580000 irq 222
- 3 [D10            ]: USB-Audio - D10
-                      Topping D10 at usb-0000:67:00.0-5, high speed
-```
+    ```sh
+    sudo cat /proc/asound/cards
+    ```
 
+    ```
+     0 [NVidia         ]: HDA-Intel - HDA NVidia
+                          HDA NVidia at 0xdf080000 irq 219
+     1 [Generic_1      ]: HDA-Intel - HD-Audio Generic
+                          HD-Audio Generic at 0xdf588000 irq 221
+     2 [Generic        ]: HDA-Intel - HD-Audio Generic
+                          HD-Audio Generic at 0xdf580000 irq 222
+     3 [D10            ]: USB-Audio - D10
+                          Topping D10 at usb-0000:67:00.0-5, high speed
+    ```
 
-Use the `card` number above in `/usr/share/alsa/alsa.conf` as shown below: I changed these values from `0` to `3`.
+    *Again, `3` for me.*
 
-```
-defaults.ctl.card 3
-defaults.pcm.card 3
-defaults.pcm.device 3
-```
+1. Use the `card` number above in `/usr/share/alsa/alsa.conf` as shown below: I changed these values from `0` to `3`.
+
+    ```
+    defaults.ctl.card 3
+    defaults.pcm.card 3
+    defaults.pcm.device 3
+    ```
 
 
 ## MPD configuration
 
-1. Edit `/etc/mpd.conf` to configure `mpd`.
+1. Open `/etc/mpd.conf`.
 
-```sh
-sudo nano /etc/mpd.conf
-```
+    ```sh
+    sudo nano /etc/mpd.conf
+    ```
 
-Here are the lines to modify. You want to uncomment all the things hereby required, comment out some (like the input section).
+1. Here are the lines to modify. 
 
-```
-# Files and directories #######################################################
-music_directory         "/home/usbaudio/share/music"
-playlist_directory      "/home/usbaudio/share/playlist"
-db_file                 "/var/lib/mpd/tag_cache"
-log_file                "/var/log/mpd/mpd.log"
-pid_file                "/var/run/mpd/pid"
-state_file              "/var/lib/mpd/state"
-sticker_file            "/var/lib/mpd/sticker.sql"
-# General music daemon options ################################################
-user                            "mpd"
-group                          	"audio"
-# For network
-#bind_to_address                "localhost"
-port                            "6600"
-auto_update     				"yes"
-# Symbolic link behavior ######################################################
-follow_outside_symlinks        "yes"
-follow_inside_symlinks        "yes"
-# Zeroconf / Avahi Service Discovery ##########################################
-zeroconf_enabled               "yes"
-zeroconf_name                  "debianmusic"
-# Input #######################################################################
-#input {
-#       plugin "curl"
-#       proxy "proxy.isp.com:8080"
-#       proxy_user "user"
-#       proxy_password "password"
-#}
-# Audio Output ################################################################
-audio_output {
-        type            "alsa"
-        name            "My ALSA Device"
-        device          "hw:1,0"        # optional
-        mixer_type      "disabled"      # optional
-#       mixer_device    "default"       # optional
-#       mixer_control   "PCM"           # optional
-#       mixer_index     "0"             # optional
-}
-# Character Encoding ##########################################################
-filesystem_charset              "UTF-8"
-###############################################################################
-```
+    You want to uncomment all the things hereby required, comment out some (like the input section).
 
-I personally added this, notably for streaming to M.A.L.P. (Android client). It's not great, though, I'll find a better solution soon™.
+    ```
+    # Files and directories #######################################################
+    music_directory         "/home/usbaudio/share/music"
+    playlist_directory      "/home/usbaudio/share/playlist"
+    db_file                 "/var/lib/mpd/tag_cache"
+    log_file                "/var/log/mpd/mpd.log"
+    pid_file                "/var/run/mpd/pid"
+    state_file              "/var/lib/mpd/state"
+    sticker_file            "/var/lib/mpd/sticker.sql"
+    # General music daemon options ################################################
+    user                            "mpd"
+    group                          	"audio"
+    # For network
+    #bind_to_address                "localhost"
+    port                            "6600"
+    auto_update     				"yes"
+    # Symbolic link behavior ######################################################
+    follow_outside_symlinks        "yes"
+    follow_inside_symlinks        "yes"
+    # Zeroconf / Avahi Service Discovery ##########################################
+    zeroconf_enabled               "yes"
+    zeroconf_name                  "debianmusic"
+    # Input #######################################################################
+    #input {
+    #       plugin "curl"
+    #       proxy "proxy.isp.com:8080"
+    #       proxy_user "user"
+    #       proxy_password "password"
+    #}
+    # Audio Output ################################################################
+    audio_output {
+            type            "alsa"
+            name            "My ALSA Device"
+            device          "hw:1,0"        # optional
+            mixer_type      "disabled"      # optional
+    #       mixer_device    "default"       # optional
+    #       mixer_control   "PCM"           # optional
+    #       mixer_index     "0"             # optional
+    }
+    # Character Encoding ##########################################################
+    filesystem_charset              "UTF-8"
+    ###############################################################################
+    ```
 
-```
-save_absolute_paths_in_playlists        "yes"
+1. I personally added this, notably for streaming to M.A.L.P. (Android client). It's not great, though, I'll find a better solution soon™.
 
-...
+    ```
+    save_absolute_paths_in_playlists    "yes"
 
-metadata_to_use "+comment"
+    ...
 
-...
+    metadata_to_use "+comment"
 
-audio_output {
-        type            "httpd"
-        name            "My HTTP Stream"
-        encoder         "opus"
-        port            "8080"
-        signal          "music"
-        bitrate         "max"
-}
+    ...
 
-```
+    audio_output {
+            type            "httpd"
+            name            "My HTTP Stream"
+            encoder         "opus"
+            port            "8080"
+            signal          "music"
+            bitrate         "max"
+    }
+
+    ```
 
 1. Finally start, enable, and check that it went fine.
 
@@ -219,13 +224,13 @@ audio_output {
     sudo systemctl status mpd
     ```
 
-If you made an error in the config file, it'll tell you in the log at the bottom of the `status` screen.
+    If you made an error in the config file, it'll tell you in the log at the bottom of the `status` screen.
 
-You may also check the global system journal directly (where the above `status` mini-log comes from). 
+    You may also check the global system journal directly (where the above `status` mini-log comes from). 
 
-```sh
-journalctl  # --help for lots of options, notably -xf
-```
+    ```sh
+    journalctl  # --help for lots of options, notably -xf
+    ```
 
 If all went fine, you may now use [clients](#clients) to control MPD.
 

@@ -63,11 +63,19 @@ For instance with `ufw`:
     ```
 
 
-
-
 ### Permissions
 
+Normally, use Linux default mode rights ( `chown` and `chmod` ).
+
+If you need extended rights attributes, to manage multi-user systems, consider using POSIX ACL (Access Control List).
+
+> [!Tip]
+> See [User>ACL][acl] for a comprehensive explanation.
+
 https://blog.alt255.com/post/posix-acls/
+
+The following procedure demonstrates adding rights for a group named `media` to a dataset that belongs to another group. Adapt to suit your own needs.
+
 
 1. Set `xattr=sa` and `acltype=posixacl` on the dataset.
 
@@ -76,75 +84,7 @@ https://blog.alt255.com/post/posix-acls/
     zfs set acltype=posixacl big/things
     ```
 
-1. Install `acl`.
-
-    ```sh
-    sudo apt-get install acl
-    ```
-
-
-1. The `getfacl` program lists ACLs on a file or directory. For example, here we list the permissions of the current directory using `ls` and see the `u=rwx,g=rx,o=rx` permission bits.
-
-    ```sh
-    ls -ld .
-    ```
-
-    ```
-    drwxr-xr-x 64 jburke jburke 140 Feb  4 18:02 .
-    ```
-
-
-1. `getfacl` gives more verbose output.
-
-    ```sh
-    getfacl .
-    ```  
-    🡳
-    ```
-    # file: .
-    # owner: jburke
-    # group: jburke
-    user::rwx
-    group::r-x
-    other::r-x
-    ```
-
-
-1. To enable the `media` group to automatically have read, write, and execute permissions to new directory entries, we use the `setfacl` program.
-
-    ```sh
-    setfacl -d -m g:media:rwx .
-
-    getfacl .
-    ```
-    🡳
-    ```
-    # file: .
-    # owner: jburke
-    # group: media
-    user::rwx
-    group::r-x
-    other::r-x
-    default:user::rwx
-    default:group::r-x
-    default:group:media:rwx
-    default:mask::rwx
-    default:other::r-x
-    ```
-
-
-Notice the `default:group:media` line indicating that the `media` group has `rwx` permission by default.
-
-For my immediate goals, this was mission accomplished: new files and directories created would automatically have read/write/execute permissions to all members of the `media` group.
-
-Once I was satisfied that ACLs were working as needed on my test directory, I used `getfacl` and `setfacl` to transfer the setings to another directory. One feature of `setfacl` is reading ACLs from `stdin`:
-
-```sh
-getfacl srcdir | setfacl -R --set-file=- dstdir
-```
-
-> [!Note]
-> Default ACLs applied to a directory do not affect the contents in the directory which already exists.
+See User > [Rights](../../../Users/Rights.md#example-give-access-to-a-second-group) to setup ACL.
 
 
 
@@ -183,3 +123,7 @@ getfacl srcdir | setfacl -R --set-file=- dstdir
 
 
 
+
+
+
+[acl]: ../../../Users/Rights.md#acl

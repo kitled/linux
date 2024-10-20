@@ -92,6 +92,29 @@ See User > [Rights](../../../Users/Rights.md#example-give-access-to-a-second-gro
 
 
 
+## NFS Client
+
+### Naive mount
+
+> ```sh
+> export         POOL_NAME="big"
+> export       SERVER_NAME="srv"    # in /etc/hosts or DNS
+> export   POOL_MOUNTPOINT="/z"
+> export CLIENT_MOUNTPOINT="/net/$POOL_NAME"
+> ```
+
+```sh
+sudo mount $SERVER_NAME:$POOL_MOUNTPOINT $CLIENT_MOUNTPOINT
+```
+
+> ```sh
+> sudo mount srv:/z /net/big
+> ```
+
+### Auto-mount
+
+`autofs` will auto-mount either *all* available shares on the network (one-liner in default config), or a specified set thereof.
+
 
 
 

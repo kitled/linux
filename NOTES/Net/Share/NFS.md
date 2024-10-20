@@ -41,7 +41,7 @@ CONFIG_NFSD_V4_SECURITY_LABEL=y
 
 #### Kernel-space
 
-First, the packages.[^out1]
+Install the kernel packages.[^out1]
 
 ```sh
 sudo apt install nfs-kernel-server         

@@ -65,7 +65,20 @@ Assuming you have a Debian or Ubuntu box up and running, you only need a few ste
 
 ## Audio configuration
 
-Connect the USB DAC and use the console to check the converter connections:
+>[!Warning]
+> There is an issue here, because the numbers below might change between reboots.  
+> 
+>
+> Ways to solve this issue:
+> - At boot (`systemd` unit to `enable` in `systemctl`), run some script that 
+>     - fetches the correct id from `/proc/asound/cards`
+>     - `sed` that into `/usr/share/alsa/alsa.conf`
+> - Ideally, **before `mpd` starts**, using `systemd` units `before` and `after` statements.  
+> - If editing the `mpd` service unit is not possible for some reason, then 
+>     - set it to `disable` in systemd
+>     - trigger `start mpd` ourselves in our own systemd unit (with the soundcard matching thing)
+
+Connect the USB DAC, and use the console to check the converter connections:
 
 ```sh
 sudo aplay --list-devices

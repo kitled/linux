@@ -4,14 +4,15 @@
 
 🅰️ https://wiki.archlinux.org/title/NFS
 
-> [!Note]
-> Use NFS**v4**. You know who you are if this doesn't apply to you.
 
 
 
 
 
 ## Server
+
+
+
 
 ### Installation
 
@@ -51,6 +52,13 @@ sudo apt install nfs-kernel-server
 > No need to edit `/etc/exports`.  
 > You may want to setup [`ssh`](../SSH/config.md) to `send|recv`.
 
+See [`man`][^man] for NSFD 
+
+> [!Note]
+> For Debian, additional configuration information can be found in this old admin page (still recommended in the Debian wiki apparently): https://www.debianadmin.com/network-file-system-nfs-server-and-client-configuration-in-debian.html
+
+☛ Pay attention to some recommendations, like `systemclt mask` for the RPC Bind thing normally unneeded for NFSv4.  
+After a wild reboot caused by a power outage (server wasn't on a UPS at that time…), the `nfs-server.service` would fail until I `systemctl unmask` both `rpcbind.service` and `rpcbind.socket`
 
 
 
@@ -103,3 +111,5 @@ sudo mount -t nfs -o vers=4 servername:/music /mountpoint/on/client
     After this operation, 3,342 kB of additional disk space will be used.
     Do you want to continue? [Y/n] 
     ```
+
+[^man]: https://manpages.debian.org/stretch/nfs-kernel-server/rpc.nfsd.8.en.html

@@ -3,8 +3,7 @@
 Manage physical drives and virtual storage spaces: format, mount, permissions, maintain…
 
 > [!Note]  
-> For sharing, see [Net](../Net/) (Network) section.  
-For instance, [NFS](../Net/NFS.md).
+> For sharing, see [Share](../Net/Share) in the Network section; for instance [NFS](../Net/Share/NFS.md).
 
 
 ## Overview

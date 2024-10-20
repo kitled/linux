@@ -113,7 +113,7 @@ sudo mount $SERVER_NAME:$POOL_MOUNTPOINT $CLIENT_MOUNTPOINT
 
 > [!Tip]  
 > Using <kbd>Tab</kbd> for auto-completion lets you validate inputs as-you-go.  
-For instance above, variable names and paths including network mounts.
+For instance above: commands and options, variable names, and paths including network mounts.
 
 
 ### Auto-mount

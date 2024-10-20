@@ -70,7 +70,7 @@ Normally, use Linux default mode rights ( `chown` and `chmod` ).
 If you need extended rights attributes, to manage multi-user systems, consider using POSIX ACL (Access Control List).
 
 > [!Tip]
-> See [User>ACL][acl] for a comprehensive explanation.
+> See User > [ACL][acl] for a comprehensive explanation.
 
 https://blog.alt255.com/post/posix-acls/
 

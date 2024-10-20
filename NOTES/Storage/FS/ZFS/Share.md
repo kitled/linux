@@ -7,7 +7,7 @@ Share ZFS filesystems over the network.
 
 ## Overview
 
-
+This note only contains the parts relevant to ZFS specifically; generic procedures can be found at [Net](../../../Net/) > [Share](../../../Net/Share/).
 
 
 
@@ -115,7 +115,7 @@ sudo mount $SERVER_NAME:$POOL_MOUNTPOINT $CLIENT_MOUNTPOINT
 
 `autofs` will auto-mount either *all* available shares on the network (one-liner in default config), or a specified set thereof.
 
-
+See Net > Share > NFS # [autofs](../../../Net/Share/NFS.md#autofs) for a comprehensive explanation.
 
 
 

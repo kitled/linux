@@ -47,7 +47,7 @@ The above table is not optimally readable, so the table below is more useful.
 
 | Action |`chmod`| file       | directory
 |--------|-------|------------|-----------
-| No access |    | `0`(`---`) | `0`(`---`) 
+|No access|`-rwx`| `0`(`---`) | `0`(`---`) 
 | Read   | `+r`  | `4`(`r--`) | `5`(`r-x`)
 | Write  | `+w`  | `6`(`rw-`) | `7`(`rwx`)
 | Execute| `+x`  | `7`(`rwx`) | -

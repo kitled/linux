@@ -45,7 +45,7 @@ The most common that make sense are 4~7.
 
 The above table is not optimally readable, so the table below is more useful.
 
-| Action |`chmod`| file       | directory
+| Action |`chmod ∀`[^for-all]|file| directory
 |--------|-------|------------|-----------
 |No access|`-rwx`| `0`(`---`) | `0`(`---`) 
 | Read   | `+r`  | `4`(`r--`) | `5`(`r-x`)
@@ -214,4 +214,6 @@ New files and directories created will automatically have read/write/execute per
 
 
 
+
+[^for-all]: $∀$ is the mathematical symbol to mean "for all"; in this case any of `u`, `g`, or `o` (respectively `user`, `group`, `other`).
 

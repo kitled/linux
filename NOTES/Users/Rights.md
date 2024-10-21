@@ -45,12 +45,12 @@ The most common that make sense are 4~7.
 
 The above table is not optimally readable, so the table below is more useful.
 
-| Action |`chmod ∀`[^for-all]|file| directory
-|--------|-------|------------|-----------
-|No access|`-rwx`| `0`(`---`) | `0`(`---`) 
-| Read   | `+r`  | `4`(`r--`) | `5`(`r-x`)
-| Write  | `+w`  | `6`(`rw-`) | `7`(`rwx`)
-| Execute| `+x`  | `7`(`rwx`) | -
+| Action | file       | directory
+|--------|------------|-----------
+|No access|`0`(`---`) | `0`(`---`) 
+| Read   | `4`(`r--`) | `5`(`r-x`)
+| Write  | `6`(`rw-`) | `7`(`rwx`)
+| Execute| `7`(`rwx`) | -
 
 
 
@@ -84,6 +84,19 @@ The most common modes are:
 - `600`\[`700`\] ☛ only owner can `read`+`write`\[+`execute`\].  
 `rw-------`\[`rwx------`\]  
 *Highly **secured***
+
+
+### `chown`
+
+`chown` (`ch`ange `own`er) is used to change the owner and group of a file.
+
+
+### `chmod`
+
+`chmod` (`ch`ange `mod`e) is used to change the mode of a file.
+
+
+`chmod ∀`[^for-all]
 
 
 

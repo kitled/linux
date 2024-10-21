@@ -86,14 +86,47 @@ The most common modes are:
 *Highly **secured***
 
 
+
+
 ### `chown`
 
 `chown` (**ch***ange* **own***er*) is used to change the owner and group of a file.
+
+>```sh
+>export OWNER_NAME='kit'
+>export GROUP_NAME='kit'
+>export FILE_PATH='/path/to/file'
+>```
+
+```sh
+sudo chown $OWNER_NAME:$GROUP_NAME $FILE_PATH
+```
+
+> ```sh
+> sudo chown kit:kit /path/to/file
+> ```
+
+When **owner** and **group** names are identical, you MAY omit the latter after `:` (semicolon).
+
+```sh
+sudo chown kit:kit /path/to/file
+         # same as
+sudo chown kit:    /path/to/file
+```
+
+Use `-R` to Recursively change the owner of a directory and its contents.
+
+```sh
+chown -R $OWNER_NAME $FILE_PATH
+```
+
+
 
 
 ### `chmod`
 
 `chmod` (**ch***ange* **mod***e*) is used to change the mode of a file.
+
 
 
 `chmod ∀`[^for-all]
@@ -129,9 +162,26 @@ A POSIX ACL (Access Control List) is an extended set of file attributes that let
 
 ### Rationale
 
+The rationale for ACL is a no-brainer if you fit its key feature/solution space.
+
+
+
+#### Manage multiple users and groups
+
 A fundamental limitation of the mode system is that it only allows one group to be granted rights. If you want to say, have two groups respectively able to read-only and read+write, you're out of luck. Using ACL solves the inherent complexity of even simple, common organization and architecture constrains.
 
 By leveraging the same foundational principles as the mode however, ACL simply extends that logic with no learning curve.
+
+
+
+#### Filesystem-level masking
+
+A strength of ACL versus mode is the ability to set specific permissions for newly created files and folders at the filesystem level (files, directories) rather than at the user level (`umask`). *See [Mask](#mask) above for a starting basis.*
+
+Systems administrators may thus leverage action origin as mode does (who, which user/group) *as well as* **destination** (to what it applies, where in the filesystem, which file/directory) in their logic to manage the rights of a system. So it's relatively easy to say "all files and directories under `/some/path` will be fully writable by our custom `group`" on a system that by default "locks everything down to `user`(owner)-only": this requirement would be a small hell using only mode and `umask`.
+
+
+
 
 
 

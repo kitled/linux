@@ -88,12 +88,12 @@ The most common modes are:
 
 ### `chown`
 
-`chown` (`ch`ange `own`er) is used to change the owner and group of a file.
+`chown` (**ch***ange* **own***er*) is used to change the owner and group of a file.
 
 
 ### `chmod`
 
-`chmod` (`ch`ange `mod`e) is used to change the mode of a file.
+`chmod` (**ch***ange* **mod***e*) is used to change the mode of a file.
 
 
 `chmod ∀`[^for-all]

@@ -1,6 +1,6 @@
 # Rights
 
-A.k.a. permissions, privileges, mode, access…
+A.k.a. file permissions, privileges, mode, access…
 
 
 
@@ -9,6 +9,11 @@ A.k.a. permissions, privileges, mode, access…
 ## Mode
 
 Default Linux permissions management in octal, over 3 bits.
+
+
+
+
+### Octal value
 
 `bit` (decimal) = `letter` role  
 `001` (1) = `x` e**x**ecute  
@@ -38,13 +43,27 @@ The most common that make sense are 4~7.
 > - Files are generally **`6`(`rw-`) = writable**, or **`4`(`r--`) = read-only**;  
 > executables **`5`** or **`7`** (like directories).
 
-Linux considers three origins of access for a file, in this order:
+The above table is not optimally readable, so the table below is more useful.
+
+| Action |`chmod`| file       | directory
+|--------|-------|------------|-----------
+| No access |    | `0`(`---`) | `0`(`---`) 
+| Read   | `+r`  | `4`(`r--`) | `5`(`r-x`)
+| Write  | `+w`  | `6`(`rw-`) | `7`(`rwx`)
+| Execute| `+x`  | `7`(`rwx`) | -
+
+
+
+
+### User category
+
+Linux considers three origins of access for a file, three categories of users, in this order (first matched is what applies).
 
 1. `owner` user
 2. `group` users
 3. `other` users
 
-Octal modes come in triplets, one for each origin.
+Octal modes (`0`~`7`) thus come in triplets, one for each category of user: for the owner, for the group, and finally for others.
 
 > [!Tip]  
 > **`640` (`rw- r-- ---`)** for instance means:  
@@ -54,17 +73,28 @@ Octal modes come in triplets, one for each origin.
 
 The most common modes are:
 
-- `600`\[`700`\] ☛ only owner can `read`+`write`\[+`execute`\].  
-`rw-------`\[`rwx------`\]  
-Highly secured files or directories
-
 - `644`\[`755`\] ☛ owner can `read`+`write`\[+`execute`\], other can `read`.  
 `rw-r--r--`\[`rwxr-xr-x`\]  
-Typical default
+*Typical **default***
 
 - `666`\[`777`\] ☛ everyone can `read`+`write`\[+`execute`\]  
 `rw-rw-rw-`\[`rwxrwxrwx`\]  
-Free for all
+***Free** for all*
+
+- `600`\[`700`\] ☛ only owner can `read`+`write`\[+`execute`\].  
+`rw-------`\[`rwx------`\]  
+*Highly **secured***
+
+
+
+
+### Mask
+
+The `umask` (user file-creation mode mask) is a setting that determines the default permission settings for newly created files and directories.
+
+It acts as a set of permissions that users are prevented from setting on newly created files. It effectively subtracts permissions from the system default, which is typically `666` for files (read and write) and `777` for directories (read, write, and execute).
+
+For example, if the umask is set to `022`, new files will have the permissions `644` (`666` minus `022`) and directories will have `755` (`777` minus `022`). This means new files are readable and writable by the owner, and readable by others, but not writable or executable by others.
 
 
 

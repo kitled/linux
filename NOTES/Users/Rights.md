@@ -114,6 +114,15 @@ A POSIX ACL (Access Control List) is an extended set of file attributes that let
 
 
 
+### Rationale
+
+A fundamental limitation of the mode system is that it only allows one group to be granted rights. If you want to say, have two groups respectively able to read-only and read+write, you're out of luck. Using ACL solves the inherent complexity of even simple, common organization and architecture constrains.
+
+By leveraging the same foundational principles as the mode however, ACL simply extends that logic with no learning curve.
+
+
+
+
 ### Example: give access to a second `group`
 
 https://blog.alt255.com/post/posix-acls/

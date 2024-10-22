@@ -8,9 +8,9 @@
 
 https://entropicthoughts.com/q
 
-`q` is an idea of a wrapper for `llm`.
+`q` is an idea of a neat wrapper for [`llm`](https://github.com/simonw/llm) by Simon Willison.
 
-Create a script, for instance called `q`.
+Create a script, for instance named `q`.
 
 `/usr/local/bin/q`
 
@@ -32,7 +32,7 @@ q <<'EOF'
 EOF
 ```
 
-Supply file context with `cat` pipe.
+Supply file context with `cat`, `grep`, `awk` pipe…
 
 ```sh
 cat LICENCE | q What licence is this?

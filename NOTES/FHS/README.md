@@ -8,8 +8,8 @@ The **Filesystem Hierarchy Standard** (**FHS**) defines the directory structure 
 ### Essential System Directories
 
 - **`/bin`**: Essential user command binaries.[^usrmerge]
-- **`/sbin`**: Essential system binaries.
-- **`/lib`**: Essential shared libraries and kernel modules.
+- **`/sbin`**: Essential system binaries.[^usrmerge]
+- **`/lib`**: Essential shared libraries and kernel modules.[^usrmerge]
 - **`/etc`**: Host-specific system configuration.
 
 

@@ -1,7 +1,5 @@
 # `/usr`
 
-
-
 In Linux systems, the `/usr` directory is a key component of the Filesystem Hierarchy Standard (FHS), which defines the structure and directory contents of Unix-like systems. Understanding how to properly organize software within this structure is crucial for system compatibility and maintainability. Here’s a breakdown of how software typically gets organized in `/usr` and the role of `/usr/local`:
 
 ## Standard Organization

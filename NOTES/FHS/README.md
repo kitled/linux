@@ -63,10 +63,10 @@ The **Filesystem Hierarchy Standard** (**FHS**) defines the directory structure 
 [^usrmerge]: As part of a broader movement known as the "usrmerge" project, which aims to simplify the filesystem hierarchy by consolidating directories that historically were separate due to technical limitations of earlier Unix systems, these folders are now usually merged with their `/usr` counterpart.
 
     ```
-    bin -> usr/bin
+     bin -> usr/bin
     sbin -> usr/sbin
-    
-    lib -> usr/lib
+
+    lib   -> usr/lib
     lib64 -> usr/lib64
     ```
 

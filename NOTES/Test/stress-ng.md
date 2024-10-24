@@ -79,7 +79,11 @@ stress-ng --matrix -1 --tz -t 60 --metrics-brief -v --thermalstat 6
 > ```
 
 
-hottest temp: `--vecwide`
+Hottest temp for me: `--vecwide`
+
+```sh
+stress-ng --vecwide 0 -v --tz -t 10m
+```
 
 
 <!--
